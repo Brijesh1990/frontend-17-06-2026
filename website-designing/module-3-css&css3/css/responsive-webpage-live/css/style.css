@@ -1,0 +1,411 @@
+body 
+{
+margin: 0;
+padding: 0;
+overflow-x: hidden;    
+}
+#header-app
+{
+width: 100%;
+height: auto;
+margin: auto;
+background-color: white;    
+display: flex;
+flex-wrap: nowrap;
+border-bottom: solid 2px gray;
+padding: 10px;
+top: 0;
+position: sticky;
+z-index: 5;
+}
+.logo 
+{
+width: 80%;
+height: auto;
+margin: auto;
+padding: 8px;
+font-size: 55px;    
+text-transform: capitalize;
+}
+.account
+{
+width: 20%;
+height: auto;
+margin: auto;
+padding: 8px;    
+}
+.account button 
+{
+width: 155px;
+height: auto;
+padding: 10px;    
+font-size: 20px;
+border: 0;
+background-color: blue;
+color: white;
+border-radius: 8px;
+}
+#navbar-app
+{
+width: 100%;
+height: auto;
+margin: auto;
+background-color: black;    
+top: 0;
+}
+#navbar-app ul 
+{
+top: 0;
+margin: auto;  
+margin-left: 45%;  
+}
+#navbar-app ul li 
+{
+display: inline-block;    
+padding: 8px 15px;
+}
+#navbar-app a 
+{
+color: white;
+text-decoration: none;
+list-style-type: none;
+font-size: 20px;    
+}
+#slider
+{
+width: 80%;
+height: 300px;
+margin-left: 10%;
+background: url('https://i.pinimg.com/1200x/3b/e8/40/3be840e706c4a8173169002ed64e41ed.jpg') no-repeat;
+background-size: cover;
+border-radius: 20px;
+position: relative;
+margin-top: 2%;
+border: solid 8px black; 
+}
+.slider-txt 
+{
+width: 60%;
+height: auto;
+margin: auto;
+margin-left: 20%;
+margin-top: 5%;  
+position: absolute;  
+}
+#content-app
+{
+width: 80%;
+height: auto;
+margin: auto;
+margin-top: 2%;    
+}
+.parent
+{
+width: 100%;
+height: auto;
+display: flex;
+flex-wrap: wrap;    
+}
+.child1
+{
+ width: 24%;
+ height: auto;
+ background-color: red;
+ border-radius: 20px;
+ margin: 5px;
+ margin-top: 3%;   
+}
+.child2
+{
+ width: 24%;
+ height: auto;
+ background-color: blue;
+ border-radius: 20px;
+ margin: 5px;
+ margin-top: 3%;   
+}
+
+.child3
+{
+ width: 24%;
+ height: auto;
+ background-color: skyblue  ;
+ border-radius: 20px;
+ margin: 5px;
+ margin-top: 3%;   
+}
+.child4
+{
+ width: 24%;
+ height: auto;
+ background-color: coral;
+ border-radius: 20px;
+ margin: 5px;
+ margin-top: 3%;   
+}
+.child1 p,
+.child2 p,
+.child3 p,
+.child4 p 
+{
+font-size: 45px;
+color: white;    
+}
+.child1 hr,
+.child2 hr,
+.child3 hr,
+.child4 hr  
+{
+width: 80%;
+border: solid 2px white;    
+}
+#footer-app
+{
+width: 100%;
+height: auto;
+display: flex;
+flex-wrap: wrap;    
+background-color: black;
+margin-top: 5%;
+}
+.footer-txt
+{
+width: 28%;
+height: auto;
+padding: 25px;    
+color: white;
+}
+.footer-txt ul li 
+{
+font-display: block;    
+text-decoration: none;
+list-style-type: none;
+}
+.footer-txt a 
+{
+text-decoration: none;
+list-style-type: none;
+color: white;    
+}
+
+/* responsive meanse you can access your website in any device of breakpoints    */
+
+/* mobile breakpoints media query */
+@media only screen and (min-width:320px) and (max-width:480px)
+{
+body 
+{
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+background-color: white;    
+}
+#header-app
+{
+width: 100%;
+height: auto;
+margin: auto;
+background-color: white;    
+display: flex;
+flex-wrap: nowrap;
+border-bottom: solid 2px gray;
+padding: 10px;
+top: 0;
+position: sticky;
+z-index: 5;
+background-color: aliceblue;
+}
+.logo 
+{
+width: 60%;
+height: auto;
+margin: auto;
+padding: 8px;
+font-size: 35px;    
+text-transform: capitalize;
+}
+.account
+{
+width: 40%;
+height: auto;
+margin: auto;
+padding: 8px;    
+}
+.account button 
+{
+width: 135px;
+height: auto;
+padding: 10px;    
+font-size: 20px;
+border: 0;
+background-color: blue;
+color: white;
+border-radius: 8px;
+}
+#navbar-app
+{
+width: 100%;
+height: auto;
+margin: auto;
+background-color: black;    
+top: 0;
+}
+#navbar-app ul 
+{
+top: 0;
+margin: auto;  
+margin-left: 0%;  
+}
+#navbar-app ul li 
+{
+display: inline-block;    
+padding: 10px 0px;
+}
+#navbar-app a 
+{
+color: white;
+text-decoration: none;
+list-style-type: none;
+font-size: 17px;    
+}
+#slider
+{
+width: 80%;
+height: 180px;
+margin-left: 10%;
+background: url('https://i.pinimg.com/1200x/3b/e8/40/3be840e706c4a8173169002ed64e41ed.jpg') no-repeat;
+background-size: cover;
+border-radius: 20px;
+position: relative;
+margin-top: 2%;
+border: solid 6px black; 
+}
+.slider-txt 
+{
+width: 90%;
+height: auto;
+margin: auto;
+margin-left: 5%;
+margin-top: 0%;  
+position: absolute;  
+font-size: 16px !important;
+}
+.slider-txt h1 
+{
+font-size: 22px;    
+}
+#content-app
+{
+width: 80%;
+height: auto;
+margin: auto;
+margin-top: 2%;    
+}
+.parent
+{
+width: 100%;
+height: auto;
+display: flex;
+flex-direction: column;    
+}
+.child1
+{
+ width: 100%;
+ height: auto;
+ background-color: red;
+ border-radius: 20px;
+ margin: 5px;
+ margin-top: 3%;   
+}
+.child2
+{
+ width: 100%;
+ height: auto;
+ background-color: blue;
+ border-radius: 20px;
+ margin: 5px;
+ margin-top: 3%;   
+}
+
+.child3
+{
+ width: 100%;
+ height: auto;
+ background-color: skyblue  ;
+ border-radius: 20px;
+ margin: 5px;
+ margin-top: 3%;   
+}
+.child4
+{
+ width: 100%;
+ height: auto;
+ background-color: coral;
+ border-radius: 20px;
+ margin: 5px;
+ margin-top: 3%;   
+}
+.child1 p,
+.child2 p,
+.child3 p,
+.child4 p 
+{
+font-size: 45px;
+color: white;    
+}
+.child1 hr,
+.child2 hr,
+.child3 hr,
+.child4 hr  
+{
+width: 80%;
+border: solid 2px white;    
+}
+#footer-app
+{
+width: 100%;
+height: auto;
+display: flex;
+flex-direction: column;    
+background-color: black;
+margin-top: 5%;
+}
+.footer-txt
+{
+width: 100%;
+height: auto;
+padding: 25px;    
+color: white;
+}
+.footer-txt ul li 
+{
+font-display: block;    
+text-decoration: none;
+list-style-type: none;
+}
+.footer-txt a 
+{
+text-decoration: none;
+list-style-type: none;
+color: white;    
+}
+
+}
+
+/* tablet breakpoints media query */
+@media only screen and (min-width:481px) and (max-width:768px)
+{
+    
+}
+
+/* laptop breakpoints media query */
+@media only screen and (min-width:769px) and (max-width:1024px)
+{
+    
+}
+
+/* large device breakpoints media query */
+@media only screen and (min-width:1025px) and (max-width:1440px)
+{
+    
+}
