@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<style>
+ body
+ {
+margin: 0;
+padding: 0;
+width: 100% !important;
+height: 100vh !important;
+background-color: white !important;
+/* background: -webkit-linear-gradient(top, #ffc400 60%, #fefdf8 40%) !important;
+background: -moz-linear-gradient(top, #ffc400 60%, #fefdf8 40%) !important;
+background: -o-linear-gradient(top, #ffc400 60%, #fefdf8 40%) !important;
+background: linear-gradient(top, #ffc400 60%, #fefdf8 40%) !important;     */
+ background:linear-gradient(#ffc400, #ffc400) top / 100% 60% no-repeat,
+  #fefdf8;
+overflow-x: hidden;
+/* animation: 5s fadeIn infinite;    */
+ }   
+ .parent
+ {
+ width: 60%;
+ height: 50vh; 
+ margin-top: 5%;
+ margin-left: 20%;
+ display: flex;
+ flex-wrap: wrap;
+ }   
+ .child1
+ {
+  width: 45%;
+  height: 30vh;
+  background-color: black;
+  animation: slideInLeft 2s infinite;
+  margin: 10px;
+ }
+ .child2
+ {
+ 
+  width: 45%;
+  height: 30vh;
+  background-color: red;
+  animation: slideInRight 2s infinite;
+  margin: 10px;
+ }
+
+
+
+  .child3
+ {
+  width: 45%;
+  height: 30vh;
+  background-color: black;
+  animation: rollIn 2s infinite;
+  margin: 10px;
+ }
+ .child4
+ {
+ 
+  width: 45%;
+  height: 30vh;
+  background-color: red;
+  animation: rollOut 2s infinite;
+  margin: 10px;
+ }
+</style>
+</head>
+<body>
+
+
+    <div class="parent">
+        <div class="child1"></div>
+        <div class="child2"></div>
+
+        <div class="child3"></div>
+        <div class="child4"></div>
+
+
+        <div class="child5"></div>
+        <div class="child6"></div>
+    </div>
+</body>
+</html>
