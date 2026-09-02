@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+
+.banner {
+    background: url('https://isuremedia.com/wp-content/uploads/2025/09/Service-Portfolio-Banner-Image-scaled.webp');
+    background-attachment: fixed;
+    background-size: cover;
+}
+.about {
+    background: url('https://isuremedia.com/wp-content/uploads/2025/05/marketing-automation-portfolio-banner-image-for-isure-copy-1-scaled.webp');
+    background-attachment: fixed;
+    background-size: cover;
+}
