@@ -1,12 +1,97 @@
 @import 'tailwindcss';
 
 .banner {
-    background: url('https://isuremedia.com/wp-content/uploads/2025/09/Service-Portfolio-Banner-Image-scaled.webp');
-    background-attachment: fixed;
-    background-size: cover;
+background: url('https://isuremedia.com/wp-content/uploads/2025/09/Service-Portfolio-Banner-Image-scaled.webp');
+background-attachment: fixed;
+background-size: cover;
 }
 .about {
-    background: url('https://isuremedia.com/wp-content/uploads/2025/05/marketing-automation-portfolio-banner-image-for-isure-copy-1-scaled.webp');
-    background-attachment: fixed;
-    background-size: cover;
+background: url('https://isuremedia.com/wp-content/uploads/2025/05/marketing-automation-portfolio-banner-image-for-isure-copy-1-scaled.webp');
+background-attachment: fixed;
+background-size: cover;
+}
+.logo-txt
+{
+animation: infinite 2s pulse;    
+}
+.profile-img
+{
+animation: 2s swing infinite;    
+}
+.portfolio-img
+{
+animation: 5s infinite fadeIn;    
+}
+
+/* Floating contact buttons */
+.floating-contact {
+animation: slideUp 0.8s ease-out both;
+}
+
+.contact-btn {
+transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+transform: translateY(-4px) scale(1.04);
+}
+
+.contact-btn:active {
+transform: scale(0.96);
+}
+
+.whatsapp-btn {
+animation: whatsappPulse 2s infinite;
+}
+
+@keyframes whatsappPulse {
+0% {
+box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
+}
+
+70% {
+box-shadow: 0 0 0 12px rgba(34, 197, 94, 0);
+}
+
+100% {
+box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+}
+}
+
+@keyframes slideUp {
+from {
+opacity: 0;
+transform: translateY(30px);
+}
+
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+.floating-contact {
+flex-direction: column;
+right: 15px;
+bottom: 15px;
+}
+
+.contact-btn span {
+display: none;
+}
+
+.contact-btn {
+width: 52px;
+height: 52px;
+padding: 0;
+justify-content: center;
+border-radius: 50%;
+}
+
+.contact-btn i {
+font-size: 21px;
+margin: 0;
+}
 }
