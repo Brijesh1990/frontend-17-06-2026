@@ -1,0 +1,138 @@
+<script>
+/*  
+what is data types in javascript ? 
+
+1. which type of values stored in variables that is called data type 
+2. data types are many types 
+
+types of data types ?
+
+1- primitive data-types 
+2- non-primitive data-types 
+
+1- primitive data-types :
+
+a) integer or number
+b) string 
+c) boolean 
+d) null
+e) undefined 
+f) Symbol
+g) float 
+
+2) non-primitive data-types 
+
+a) array 
+b) object 
+c) function 
+
+
+*/ 
+
+// number : stored integer or number in variables 
+
+/*
+a=1065102;
+b=15651232;
+console.log(a)
+console.log(b)
+console.log(typeof(a))
+console.log(typeof(b))
+*/ 
+
+//string : string is a set of character i.e called string
+// string stored data inside of '' or "" quotation
+
+/*
+a="10";
+b='brijesh';
+c="10.65599";
+console.log(c)
+console.log(typeof(c))
+*/ 
+/*
+a="10";
+b="5";
+c=a+b;
+console.log("Additions of numbers is :",c); 
+*/ 
+/* 
+
+type casting : string to number  
+
+1. string to number parseInt() 
+2. string to float  parseFloat()
+
+
+*/
+
+/*
+a=parseInt("10");
+b=parseInt("5");
+c=a+b;
+console.log("Additions of numbers is :",c); 
+console.log(typeof(c));
+
+a=parseFloat("10");
+b=parseFloat("5");
+d=a+b;
+console.log("Additions of numbers is :",d); 
+console.log(typeof(d));
+
+*/
+
+// undefined : no defined any values in variables i.e called undefined 
+
+/*
+var a;
+var b;
+console.log(a);
+console.log(typeof(a));
+*/
+
+/*
+var a=10;
+var b=5;
+console.log(a+b);
+//console.log(typeof(a));
+
+*/ 
+/*
+var name=null;
+console.log(name);
+
+
+*/ 
+
+
+// boolean : boolean values is True of False 
+
+/*
+a=true
+b=false
+//console.log(a)
+//console.log(b)
+
+console.log(typeof(a));
+console.log(typeof(b));
+
+*/ 
+
+// Symbol()
+
+/*
+var a=Symbol(10);
+var b=Symbol("brijesh");
+console.log(a);
+console.log(b);
+console.log(typeof(a));
+
+*/
+
+// can't convert Symbol in Int or float
+
+var a=parseInt(Symbol(10));
+var b=parseInt(Symbol("20"));
+console.log(a+b);
+
+</script>
