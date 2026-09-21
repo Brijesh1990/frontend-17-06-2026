@@ -19,6 +19,7 @@ d) null
 e) undefined 
 f) Symbol
 g) float 
+h) bigInteger
 
 2) non-primitive data-types 
 
@@ -131,8 +132,128 @@ console.log(typeof(a));
 
 // can't convert Symbol in Int or float
 
+/*
 var a=parseInt(Symbol(10));
 var b=parseInt(Symbol("20"));
 console.log(a+b);
+*/ 
+
+/*
+a=15465545;
+console.log(a)
+console.log(typeof(a))
+
+*/ 
+//bigInteger 
+/*
+a=154655455n;
+console.log(a)
+console.log(typeof(a))
+*/ 
+
+// float : accept decimal values 
+// a=10.25656
+// b=2021.6565
+//b=2021.6565
+//console.log(b)
+//console.log(typeof(b))
+//var a=10;
+//res=parseFloat(a);
+//console.log(res);
+//console.log(typeof(res));
+
+// none primitive data types
+// array 
+// object 
+// function
+
+
+//array : array stored multiple data in a single variables r element i.e called array
+//var employee=["jay","drij","ayaz"];
+//consol.log(employee)
+
+/*
+var employee=["jay","drij","ayaz"];
+console.log(employee);
+console.log(typeof(employee));
+*/ 
+/*
+var employee=new Array("jay","veeru","drij","mahiraj");
+console.log(employee);
+console.log(typeof(employee));
+*/
+
+/*
+var employee=new Array("jay","veeru","drij","mahiraj");
+console.log(employee);
+console.log(typeof(employee));
+console.log(employee[1]);
+console.log(employee[2]);
+
+*/
+
+
+//object : object is an entity that can be enclosed between {property:value}
+// var obj={id:1, name:"brijesh",age:35,dep:"IT"};
+// console.log(obj);
+
+/*
+var obj={id:1, name:"brijesh",age:35,dep:"IT"};
+console.log(obj);
+console.log(typeof(obj));
+console.log(obj.name);
+console.log(obj.age);
+console.log(obj.dep);
+
+*/ 
+
+/*
+var obj=new Object(
+    {id:1, name:"brijesh",age:35,dep:"IT"}
+);
+
+console.log(obj);
+console.log(obj.name);
+console.log(obj.age);
+console.log(obj.dep);
+
+*/
+
+
+// function : A function is block of code that can be completed any task i.e called function 
+
+// declare a function 
+
+
+/*
+function functioname()
+{
+    statements;
+}
+call function
+
+*/
+
+/*
+function display()
+{
+   var name="hi i am Brijesh";
+   console.log(name); 
+}
+display();
+
+*/
+
+function add()
+{
+
+var a=20;
+var b=30;
+var c=a+b
+console.log("additions od numbers is :",c);
+}
+add()
+
+
 
 </script>
