@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<!-- called jquery online CDN -->
+<!-- 1. jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- 2. jQuery Easing: required for easeOutBack -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+<!-- 3. jQuery Cycle: all classic effects -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/2.9999.8/jquery.cycle.all.min.js"></script>
+
+
+<script>
+jQuery.browser = {
+    msie: false,
+    version: "0",
+    webkit: /webkit/i.test(navigator.userAgent),
+    mozilla: /mozilla/i.test(navigator.userAgent) &&
+             !/compatible|webkit/i.test(navigator.userAgent),
+    opera: /opera|opr\//i.test(navigator.userAgent)
+};
+</script>
+
+<script>
+$(document).ready(function(){
+//   $("#slider").cycle({
+//     "fx":'shuffle'
+//   });
+
+// $("#slider").cycle({
+//     "fx":'zoom'
+//   });
+
+// $("#slider").cycle({
+//     fx:"turnLeft"
+// });
+
+//  $('#slider').cycle({
+//         fx: 'shuffle',
+//         easing: 'easeOutBack',
+//         delay: -4000,
+//         timeout: 4000,
+//         speed: 1000
+//     });
+
+
+//  $('#slider').cycle({
+//         fx: 'zoom',
+//         easing: 'easeOutBack',
+//         delay: -4000,
+//         timeout: 4000,
+//         speed: 1000
+//     });
+
+
+//  $('#slider').cycle({
+//         fx: 'turnRight',
+//         easing: 'easeOutBack',
+//         delay: -4000,
+//         timeout: 4000,
+//         speed: 1000
+//     });
+
+//  $('#slider').cycle({
+//         fx: 'turnRight',
+//         easing: 'easeOutBack',
+//         delay: -4000,
+//         timeout: 4000,
+//         speed: 1000
+//     });
+
+$('#slider').cycle({
+        fx: 'wipe',
+        easing: 'easeOutBack',
+        delay: -4000,
+        timeout: 1000,
+        speed: 2000
+    });
+})
+</script> 
+<style>
+body
+{
+margin: 0;
+padding: 0;    
+}    
+#slider
+{
+width: 100%;
+height: 350px;
+}    
+#slider img 
+{
+width: 100%;
+height: 350px;    
+}
+</style>
+</head>
+<body>
+<div id="slider">
+<img src="https://wowslider.com/sliders/demo-18/data1/images/hongkong1081704.jpg">    
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJo0-ijERAuCmT_FvQ-EIicGv8gguDII976rPVEj-JBYCE8udWqRcuxM&s=10">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQUADoyVPVcsiRaQV-0ZGlUmw82yTtUzhkhe80bWyYN6UgiK8TvWi_OyWC&s=10">
+</div>
+
+
+
+
+
+<!-- 
+all fx effects
+
+fx: 'blindX'
+fx: 'blindY'
+fx: 'blindZ'
+fx: 'cover'
+fx: 'curtainX'
+fx: 'curtainY'
+fx: 'fade'
+fx: 'fadeZoom'
+fx: 'growX'
+fx: 'growY'
+fx: 'none'
+fx: 'scrollUp'
+fx: 'scrollDown'
+fx: 'scrollLeft'
+fx: 'scrollRight'
+fx: 'scrollHorz'
+fx: 'scrollVert'
+fx: 'shuffle'
+fx: 'slideX'
+fx: 'slideY'
+fx: 'toss'
+fx: 'turnUp'
+fx: 'turnDown'
+fx: 'turnLeft'
+fx: 'turnRight'
+fx: 'uncover'
+fx: 'wipe'
+
+-->
+</body>
+</html>
