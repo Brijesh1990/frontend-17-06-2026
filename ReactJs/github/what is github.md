@@ -47,3 +47,16 @@
      git push -u origin master
 
      ````
+
+
+ # how to download backup via commands 
+
+   1. open gitbash in any directory where you want to download backup
+   2. command to download 
+
+      ```
+      git clone  paste your links
+      or
+      
+      ```
+
