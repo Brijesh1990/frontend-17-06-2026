@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<!-- called jquery online CDN -->
+<script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+<script>
+$(document).ready(function(){
+
+    $(".content").click(function(){
+
+        $(".slide img").slideToggle(1500);
+    })
+
+})
+</script> 
+</head>
+<body>
+<div class="content">click to slide</div>
+<div class="slide">
+<img src="https://wowslider.com/sliders/demo-18/data1/images/hongkong1081704.jpg">    
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+body 
+{
+margin: 0;    
+padding: 0;
+overflow-x: hidden;
+background-color: aliceblue;
+}    
+.app 
+{
+width: 30%;
+height: auto;
+margin: auto;
+margin-top: 5%;
+background-color: cadetblue;
+padding: 20px 25px;    
+border-radius: 20px;
+}
+.app input[type="text"],.app input[type="email"],.app input[type="password"],.app textarea 
+{
+width: 80%;
+height: auto;
+margin: auto;
+padding: 8px;
+margin-left: 10%;
+border: 0;
+background-color: cadetblue;
+border-bottom: solid 2px;    
+}
+::placeholder
+{
+color: white;
+font-size: 18px;
+}
+.app input[type="submit"]
+{
+width: 100px;
+height: auto;
+margin: auto;
+border: 0;
+background-color: black;
+padding: 10px;
+color: white;
+margin-left: 8%;    
+}
+
+.app input[type="reset"]
+{
+width: 100px;
+height: auto;
+margin: auto;
+border: 0;
+background-color: red;
+padding: 10px;
+color: white;
+margin-left: 2%;    
+}
+.app input[type="reset"]:hover 
+{
+background-color: coral;
+}
+.app input[type="submit"]:hover 
+{
+background-color: gray;
+}
+
+</style>
+</head>
+<body>
+<div class="app">
+  <form>
+    <input type="text" placeholder="Name *" required>
+    <br><br>
+    <input type="email" placeholder="Email *" required>
+    <br><br>
+    <input type="password" placeholder="Password *" required>
+    <br><br>
+    <textarea placeholder="Address *" required></textarea>
+    <br><br>
+    <input type="submit" value="Register">
+    <input type="reset" value="Reset">
+
+  </form>  
+</div>
+</body>
+</html>

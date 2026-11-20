@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<!-- Tailwind CSS 4 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<!-- called jquery online CDN -->
+<!-- 1. jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- 2. jQuery Easing: required for easeOutBack -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+<!-- 3. jQuery Cycle: all classic effects -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/2.9999.8/jquery.cycle.all.min.js"></script>
+
+<script>
+jQuery.browser = {
+    msie: false,
+    version: "0",
+    webkit: /webkit/i.test(navigator.userAgent),
+    mozilla: /mozilla/i.test(navigator.userAgent) &&
+             !/compatible|webkit/i.test(navigator.userAgent),
+    opera: /opera|opr\//i.test(navigator.userAgent)
+};
+</script>
+
+<script>
+$(document).ready(function(){
+
+// $('#slider').cycle({
+//         fx: 'wipe',
+//         easing: 'easeOutBack',
+//         delay: -4000,
+//         timeout: 1000,
+//         speed: 2000
+//     });
+
+$('#slider').cycle({
+        fx: 'wipe,uncover,turnLeft,turnRight,zoom,growX,growY',
+        easing: 'easeOutBack',
+        delay: -4000,
+        timeout: 1000,
+        speed: 2000
+    });
+})
+</script>
+
+<style>
+body
+{
+margin: 0;
+padding: 0;
+}
+#slider
+{
+width: 100%;
+height: 350px;
+}
+#slider img
+{
+width: 100%;
+height: 350px;
+}
+</style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+<!-- NAVBAR: Added -->
+<nav class="bg-gray-900 text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-4">
+
+        <a href="#" class="text-2xl font-bold tracking-wide">
+            My<span class="text-blue-400">Website</span>
+        </a>
+
+        <div class="flex flex-wrap items-center gap-6 text-sm font-medium">
+            <a href="#" class="text-blue-400 hover:text-white transition">Home</a>
+            <a href="#about" class="hover:text-blue-400 transition">About</a>
+            <a href="#services" class="hover:text-blue-400 transition">Services</a>
+            <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+        </div>
+
+        <a href="#contact"
+           class="bg-blue-500 hover:bg-blue-600 px-5 py-2 rounded-lg font-semibold transition">
+            Get Started
+        </a>
+
+    </div>
+</nav>
+
+<!-- YOUR ORIGINAL SLIDER: Unchanged -->
+<div id="slider">
+<img src="https://wowslider.com/sliders/demo-18/data1/images/hongkong1081704.jpg">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJo0-ijERAuCmT_FvQ-EIicGv8gguDII976rPVEj-JBYCE8udWqRcuxmS&s=10">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQUADoyVPVcsiRaQV-0ZGlUmw82yTtUzhkhe80bWyYN6UgiK8TvWi_OyWC&s=10">
+</div>
+
+<!-- CONTENT: Added -->
+<main>
+
+    <!-- Welcome Section -->
+    <section class="bg-white py-16 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <p class="text-blue-600 font-semibold uppercase tracking-widest text-sm mb-3">
+                Welcome to our website
+            </p>
+
+            <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+                Build Something Amazing With Us
+            </h1>
+
+            <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-8">
+                Discover creative solutions, modern design, and reliable services
+                to help bring your ideas to life. We are here to help you take
+                your next step with confidence.
+            </p>
+
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a href="#services"
+                   class="bg-blue-600 hover:bg-blue-700 text-white px-7 py-3 rounded-lg font-semibold transition">
+                    Explore Services
+                </a>
+
+                <a href="#about"
+                   class="border border-gray-300 hover:border-blue-600 hover:text-blue-600 px-7 py-3 rounded-lg font-semibold transition">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-gray-100 py-16 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+            <div>
+                <p class="text-blue-600 uppercase tracking-widest font-semibold text-sm mb-3">
+                    About Us
+                </p>
+
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-5">
+                    We Turn Your Ideas Into Reality
+                </h2>
+
+                <p class="text-gray-600 leading-8 mb-5">
+                    Our goal is to provide quality solutions with a focus on
+                    creativity, simplicity, and customer satisfaction.
+                    We believe every great project starts with a great idea.
+                </p>
+
+                <p class="text-gray-600 leading-8 mb-7">
+                    Whether you are starting something new or improving an
+                    existing project, we are ready to help you move forward.
+                </p>
+
+                <a href="#contact"
+                   class="inline-block bg-gray-900 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition">
+                    Contact Us
+                </a>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-md">
+                <div class="grid grid-cols-2 gap-5">
+
+                    <div class="bg-blue-50 rounded-xl p-6 text-center">
+                        <h3 class="text-3xl font-bold text-blue-600">100+</h3>
+                        <p class="text-gray-600 mt-2">Projects</p>
+                    </div>
+
+                    <div class="bg-indigo-50 rounded-xl p-6 text-center">
+                        <h3 class="text-3xl font-bold text-indigo-600">50+</h3>
+                        <p class="text-gray-600 mt-2">Clients</p>
+                    </div>
+
+                    <div class="bg-purple-50 rounded-xl p-6 text-center">
+                        <h3 class="text-3xl font-bold text-purple-600">5+</h3>
+                        <p class="text-gray-600 mt-2">Years Experience</p>
+                    </div>
+
+                    <div class="bg-green-50 rounded-xl p-6 text-center">
+                        <h3 class="text-3xl font-bold text-green-600">24/7</h3>
+                        <p class="text-gray-600 mt-2">Support</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-white py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="text-center mb-12">
+                <p class="text-blue-600 uppercase tracking-widest font-semibold text-sm mb-3">
+                    What We Do
+                </p>
+
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+                    Our Services
+                </h2>
+
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                    Explore our services designed to support your goals and
+                    deliver a great experience.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="p-8 border border-gray-200 rounded-2xl hover:shadow-xl hover:-translate-y-1 transition">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-5">
+                        ✦
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Web Design</h3>
+                    <p class="text-gray-600 leading-7">
+                        Modern, responsive, and user-friendly designs
+                        for your website and online presence.
+                    </p>
+                </div>
+
+                <div class="p-8 border border-gray-200 rounded-2xl hover:shadow-xl hover:-translate-y-1 transition">
+                    <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-5">
+                        ⚙
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Development</h3>
+                    <p class="text-gray-600 leading-7">
+                        Reliable web development solutions built
+                        around your requirements and objectives.
+                    </p>
+                </div>
+
+                <div class="p-8 border border-gray-200 rounded-2xl hover:shadow-xl hover:-translate-y-1 transition">
+                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-xl flex items-center justify-center text-2xl mb-5">
+                        ↗
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Digital Solutions</h3>
+                    <p class="text-gray-600 leading-7">
+                        Practical digital strategies to help your
+                        business grow and reach more people.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section class="bg-blue-600 py-16 px-6">
+        <div class="max-w-4xl mx-auto text-center text-white">
+
+            <h2 class="text-3xl md:text-4xl font-bold mb-5">
+                Ready to Start Your Next Project?
+            </h2>
+
+            <p class="text-blue-100 text-lg leading-8 mb-8">
+                Let's work together to create something meaningful.
+                Get in touch with us to discuss your ideas.
+            </p>
+
+            <a href="#contact"
+               class="inline-block bg-white text-blue-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-bold transition">
+                Let's Talk
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-100 py-16 px-6">
+        <div class="max-w-3xl mx-auto">
+
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+                    Contact Us
+                </h2>
+
+                <p class="text-gray-600 mt-4">
+                    Have a question or an idea? Send us a message.
+                </p>
+            </div>
+
+            <form action="#" method="post" class="bg-white rounded-2xl shadow-md p-6 md:p-8 space-y-5">
+
+                <div>
+                    <label for="name" class="block text-sm font-semibold mb-2">
+                        Your Name
+                    </label>
+                    <input type="text" id="name" name="name"
+                           placeholder="Enter your name"
+                           class="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <div>
+                    <label for="email" class="block text-sm font-semibold mb-2">
+                        Email Address
+                    </label>
+                    <input type="email" id="email" name="email"
+                           placeholder="Enter your email"
+                           class="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <div>
+                    <label for="message" class="block text-sm font-semibold mb-2">
+                        Message
+                    </label>
+                    <textarea id="message" name="message" rows="5"
+                              placeholder="Write your message..."
+                              class="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+
+                <button type="submit"
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition">
+                    Send Message
+                </button>
+
+            </form>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER: Added -->
+<footer class="bg-gray-900 text-gray-300">
+
+    <div class="max-w-7xl mx-auto px-6 py-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+        <div>
+            <a href="#" class="text-2xl font-bold text-white">
+                My<span class="text-blue-400">Website</span>
+            </a>
+
+            <p class="mt-4 text-gray-400 leading-7">
+                Creative ideas, modern solutions, and reliable services
+                to help you build something amazing.
+            </p>
+        </div>
+
+        <div>
+            <h3 class="text-white text-lg font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-3">
+                <li><a href="#" class="hover:text-blue-400 transition">Home</a></li>
+                <li><a href="#about" class="hover:text-blue-400 transition">About Us</a></li>
+                <li><a href="#services" class="hover:text-blue-400 transition">Services</a></li>
+                <li><a href="#contact" class="hover:text-blue-400 transition">Contact</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="text-white text-lg font-bold mb-4">Our Services</h3>
+            <ul class="space-y-3">
+                <li><a href="#services" class="hover:text-blue-400 transition">Web Design</a></li>
+                <li><a href="#services" class="hover:text-blue-400 transition">Development</a></li>
+                <li><a href="#services" class="hover:text-blue-400 transition">Digital Solutions</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="text-white text-lg font-bold mb-4">Get In Touch</h3>
+            <p class="text-gray-400 mb-3">Email: info@example.com</p>
+            <p class="text-gray-400 mb-3">Phone: +91 12345 67890</p>
+            <p class="text-gray-400">Address: Your City, India</p>
+        </div>
+
+    </div>
+
+    <div class="border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-gray-400">
+            <p>&copy; 2026 MyWebsite. All rights reserved.</p>
+
+            <div class="flex gap-5">
+                <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition">Terms</a>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!--
+all fx effects
+
+fx: 'blindX'
+fx: 'blindY'
+fx: 'blindZ'
+fx: 'cover'
+fx: 'curtainX'
+fx: 'curtainY'
+fx: 'fade'
+fx: 'fadeZoom'
+fx: 'growX'
+fx: 'growY'
+fx: 'none'
+fx: 'scrollUp'
+fx: 'scrollDown'
+fx: 'scrollLeft'
+fx: 'scrollRight'
+fx: 'scrollHorz'
+fx: 'scrollVert'
+fx: 'shuffle'
+fx: 'slideX'
+fx: 'slideY'
+fx: 'toss'
+fx: 'turnUp'
+fx: 'turnDown'
+fx: 'turnLeft'
+fx: 'turnRight'
+fx: 'uncover'
+fx: 'wipe'
+fx: 'zoom'
+-->
+
+</body>
+</html>

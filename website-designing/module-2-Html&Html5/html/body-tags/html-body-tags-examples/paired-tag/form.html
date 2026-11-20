@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+form 
+{
+width: 100%;
+height: auto;
+margin: auto;    
+}    
+input,textarea
+{
+width: 60%;
+height: auto;
+padding: 10px;    
+}
+select
+{
+width: 64%;
+height: auto;
+padding: 10px;    
+}
+input[type="submit"]
+{
+width: 31%;
+height: auto;
+background-color: black;
+color: white;
+padding: 15px;
+border: 0;
+}
+input[type="reset"]
+{
+
+width: 31%;
+height: auto;
+background-color: red;
+color: white;
+padding: 15px;
+border: 0;
+}
+
+</style>
+</head>
+<body>
+<div style="width: 50%; height: auto; margin:auto; margin-top:5%">
+<h1>send all your details</h1>
+<form action="welcome.html">
+<input type="text" name="name" placeholder="Name *" required>
+<br><br>
+<input type="text" name="email" placeholder="Email *" required>
+<br><br>
+<input type="text" name="mobile" placeholder="Mobile *" required>
+<br><br>
+<select name="subject" placeholder="Subject *" required>
+<option value="">-select subject-</option>
+<option value="24x7 customer support">24x7 customer support</option>
+<option value="return products">return product</option> 
+<option value="faq">fast asked question</option> 
+<option value="refund cash">refund cash</option>     
+</select>
+<br><br>
+<textarea name="message" placeholder="Message" required></textarea>
+<br><br>
+<input type="submit" name="submit" value="Send">
+<input type="reset" name="reset" value="Reset">
+
+</form>
+</div>
+</body>
+</html>

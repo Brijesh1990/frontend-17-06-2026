@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+#star li
+{
+text-decoration: none !important;
+list-style-type: none !important;
+}    
+#star li::before 
+{
+content: "🍏";    
+}
+</style>
+</head>
+<body>
+<h1>Html list</h1>
+<h3>There are 3 types of LIst</h3>
+<h4>1. Order 2. Unorder List 3. Nested List</h4>
+
+<h1>Examples of Order List</h1>
+<ol>
+<li>Banana</li>
+<li>Apple</li>
+<li>Orange</li>
+<li>Mango</li>
+<li>Watermenon</li>    
+</ol>
+
+<ol type="A">
+<li>Banana</li>
+<li>Apple</li>
+<li>Orange</li>
+<li>Mango</li>
+<li>Watermenon</li>    
+</ol>
+
+<ol type="a">
+<li>Banana</li>
+<li>Apple</li>
+<li>Orange</li>
+<li>Mango</li>
+<li>Watermenon</li>    
+</ol>
+
+<ol type="i">
+<li>Banana</li>
+<li>Apple</li>
+<li>Orange</li>
+<li>Mango</li>
+<li>Watermenon</li>    
+</ol>
+
+
+
+<h1>Examples of UnOrder List</h1>
+<ul>
+<li>Banana</li>
+<li>Apple</li>
+<li>Orange</li>
+<li>Mango</li>
+<li>Watermenon</li>    
+</ul>
+
+<ul type="circle">
+<li>Banana</li>
+<li>Apple</li>
+<li>Orange</li>
+<li>Mango</li>
+<li>Watermenon</li>    
+</ul>
+
+<ul type="square">
+<li>Banana</li>
+<li>Apple</li>
+<li>Orange</li>
+<li>Mango</li>
+<li>Watermenon</li>    
+</ul>
+
+
+<ul type="square" id="star">
+<li>Banana</li>
+<li>Apple</li>
+<li>Orange</li>
+<li>Mango</li>
+<li>Watermenon</li>    
+</ul>
+
+
+<h1>Nested List</h1>
+<ol>
+    <li>List of fruits
+        <ul>
+            <li>Banana</li>
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Mango</li>
+        </ul>
+    </li>
+  <li>List of vegetable
+    <ul>
+        <li>Potato</li>
+        <li>Tomato
+            <ol>
+                <li>Desi tomato</li>
+                <li>Videsi tomato</li>
+            </ol>
+        </li>
+        <li>Onion</li>
+    </ul>
+  </li>  
+</ol>
+
+</body>
+</html>

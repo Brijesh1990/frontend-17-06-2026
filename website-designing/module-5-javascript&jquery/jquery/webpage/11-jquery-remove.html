@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <!-- Tailwind CSS 4 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- delete cart -->
+     <script>
+        $(document).ready(function(){
+
+            $("#delcrt1").click(function(){
+
+                $("#del1").remove();
+            })
+        })
+     </script>
+
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-900 text-white px-6 py-5">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">
+                Shop<span class="text-blue-400">Easy</span>
+            </a>
+
+            <div class="flex items-center gap-2">
+                <span class="text-xl">🛒</span>
+                <span>Cart (<span id="cartCount">3</span>)</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 py-10">
+
+        <div class="flex flex-wrap justify-between items-center gap-4 mb-8">
+            <div>
+                <h1 class="text-3xl font-bold text-gray-900">Shopping Cart</h1>
+                <p class="text-gray-500 mt-2">Review your items before checkout.</p>
+            </div>
+
+            <button onclick="clearCart()"
+                class="border border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-5 py-2 rounded-lg transition">
+                Clear Cart
+            </button>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8">
+
+            <!-- Cart Products -->
+            <section class="lg:col-span-2">
+                <div class="bg-white rounded-2xl shadow-sm p-5 md:p-7">
+
+                    <div class="hidden md:grid grid-cols-12 gap-4 border-b pb-4 mb-5 text-sm font-semibold text-gray-500">
+                        <div class="col-span-6">PRODUCT</div>
+                        <div class="col-span-2">PRICE</div>
+                        <div class="col-span-2">QUANTITY</div>
+                        <div class="col-span-2 text-right">TOTAL</div>
+                    </div>
+
+                    <div id="del1" class="space-y-6">
+
+                        <!-- Product 1 -->
+                        <div  class="cart-item grid grid-cols-2 md:grid-cols-12 gap-4 items-center border-b pb-6"
+                            data-price="799">
+
+                            <div class="col-span-2 md:col-span-6 flex items-center gap-4">
+                                <img src="https://placehold.co/100x100/e0e7ff/3730a3?text=Shoes"
+                                    alt="Running shoes"
+                                    class="w-20 h-20 rounded-xl object-cover">
+
+                                <div>
+                                    <h3 class="font-bold text-gray-900">Running Shoes</h3>
+                                    <p class="text-sm text-gray-500 mt-1">Color: Blue</p>
+                                    <p class="text-sm text-gray-500">Size: 9</p>
+
+                                    <button type="button" id="delcrt1"
+                                        class="text-red-500 hover:text-red-700 text-sm mt-2">
+                                        🗑 Delete Cart
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="md:col-span-2">
+                                <span class="md:hidden text-xs text-gray-500">Price</span>
+                                <p>₹799</p>
+                            </div>
+
+                            <div class="md:col-span-2">
+                                <label class="md:hidden text-xs text-gray-500 block mb-1">Quantity</label>
+                                <div class="flex items-center gap-2">
+                                    <button onclick="changeQty(this, -1)"
+                                        class="w-8 h-8 border rounded hover:bg-gray-100">−</button>
+                                    <span class="quantity font-semibold">1</span>
+                                    <button onclick="changeQty(this, 1)"
+                                        class="w-8 h-8 border rounded hover:bg-gray-100">+</button>
+                                </div>
+                            </div>
+
+                            <div class="md:col-span-2 text-right">
+                                <span class="md:hidden text-xs text-gray-500">Total</span>
+                                <p class="item-total font-bold">₹799</p>
+                            </div>
+                        </div>
+
+                    
+
+                       
+
+                    </div>
+
+                    <!-- Empty Cart Message -->
+                    <div id="emptyCart" class="hidden text-center py-12">
+                        <div class="text-6xl mb-4">🛒</div>
+                        <h2 class="text-2xl font-bold">Your cart is empty!</h2>
+                        <p class="text-gray-500 mt-2">Add some products to get started.</p>
+                        <a href="#"
+                            class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg mt-5">
+                            Continue Shopping
+                        </a>
+                    </div>
+
+                </div>
+
+                <a href="#"
+                    class="inline-block mt-6 text-blue-600 hover:text-blue-800 font-semibold">
+                    ← Continue Shopping
+                </a>
+            </section>
+
+            <!-- Order Summary -->
+            <aside>
+                <div class="bg-white rounded-2xl shadow-sm p-6 sticky top-6">
+                    <h2 class="text-xl font-bold mb-6">Order Summary</h2>
+
+                    <div class="space-y-4 text-gray-600">
+                        <div class="flex justify-between gap-4">
+                            <span>Subtotal</span>
+                            <span id="subtotal" class="font-semibold text-gray-900">₹2,597</span>
+                        </div>
+
+                        <div class="flex justify-between gap-4">
+                            <span>Shipping</span>
+                            <span id="shipping" class="font-semibold text-green-600">FREE</span>
+                        </div>
+
+                        <div class="flex justify-between gap-4">
+                            <span>Tax (5%)</span>
+                            <span id="tax" class="font-semibold text-gray-900">₹129.85</span>
+                        </div>
+                    </div>
+
+                    <div class="border-t mt-6 pt-5 flex justify-between items-center gap-4">
+                        <span class="text-lg font-bold">Total</span>
+                        <span id="grandTotal" class="text-2xl font-bold text-blue-600">₹2,726.85</span>
+                    </div>
+
+                    <button onclick="checkout()"
+                        id="checkoutBtn"
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold mt-6 transition">
+                        Proceed to Checkout
+                    </button>
+
+                    <p class="text-xs text-gray-500 text-center mt-4">
+                        🔒 Secure checkout
+                    </p>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 mt-12">
+        <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>© 2026 ShopEasy. All rights reserved.</p>
+            <div class="flex gap-5">
+                <a href="#" class="hover:text-white">Privacy Policy</a>
+                <a href="#" class="hover:text-white">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

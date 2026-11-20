@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+body 
+{
+margin: 0;
+padding: 0;    
+}    
+.app
+{
+width: 40%;
+height: auto;
+margin: auto;
+margin-top: 5%;    
+}
+.app img 
+{
+width: 60%;
+height: auto;
+margin: auto;    
+}
+#btn1
+{
+width: 20%;
+height: auto;
+margin: auto;
+padding: 12px;
+border: none;
+background-color: green;
+color: white;    
+margin-left: 8%;
+}
+
+#btn2
+{
+width: 20%;
+height: auto;
+margin: auto;
+padding: 12px;
+border: none;
+background-color: red;
+color: white;    
+}
+</style>
+<script>
+function display1()
+{
+document.getElementById("imgg").src="images/on.png";
+}   
+function display2()
+{
+document.getElementById("imgg").src="images/off.png";
+} 
+</script>
+</head>
+<body>
+<div class="app">
+<img src="images/off.png" id="imgg">
+<br><br>
+<!-- <button type="button" id="btn1" onclick="display1()">On</button>
+<button type="button" id="btn2" onclick="display2()">Off</button> -->
+
+<!-- <button type="button" id="btn1" ondblclick="display1()">On</button>
+<button type="button" id="btn2" ondblclick="display2()">Off</button> -->
+
+<button type="button" id="btn1" onmouseover="display1()">On</button>
+<button type="button" id="btn2" onmouseout="display2()">Off</button>
+</div>
+
+
+</body>
+</html>

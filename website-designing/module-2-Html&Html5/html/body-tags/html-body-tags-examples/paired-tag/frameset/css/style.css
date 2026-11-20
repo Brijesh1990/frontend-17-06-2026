@@ -1,0 +1,33 @@
+body 
+{
+margin: 0;
+padding: 0;    
+}
+ul li 
+{
+text-decoration: none;
+list-style-type: none;    
+padding: 15px 0px;
+}
+ul li a 
+{
+text-decoration: none;
+color: black;
+font-size: 20px;
+}
+div 
+{
+width: 70%;    
+padding: 30px;    
+}
+div ul li 
+{
+list-style-type: disc !important;    
+}
+button 
+{
+width: auto;
+height: auto;
+padding: 15px;
+border: none;    
+}

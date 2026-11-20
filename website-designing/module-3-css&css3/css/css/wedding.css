@@ -1,0 +1,157 @@
+@font-face {
+font-family: hunkyfont;
+src: url('../fonts/Hanky\ Demo.otf');
+}    
+@font-face {
+font-family: suden;
+src: url('../fonts/SudegnakNo4-Orange.ttf');
+}
+body 
+{
+margin: 0;
+padding: 0;
+background-color: aliceblue;    
+}
+section 
+{
+width: 50%;
+height: auto;
+margin: auto;
+margin-top: 5%;
+border: 45px solid transparent;
+position: relative;
+/* border-image: url('https://www.kindpng.com/picc/m/4-42826_wedding-borders-border-clipart-transparent-png-copy-and.png') round 100;  */
+
+border-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD11e8H1CS3O9vFdyqch_60HKH3OjjyJSSQC4lt7O9SW3SPg3-QxOxzBSs&s=10') round 85; 
+padding: 25px;
+background-color: white;   
+border-radius: 25px;
+}
+
+/* id selector  : id selector is used to provides diff-2 stylesheet 
+                  id selector call via # 
+                  id is unique 
+                  id never repeated 
+
+*/
+#content1 
+{
+width: 50%;
+height: auto;
+margin: auto;
+margin-top: 5%;
+border: 45px solid transparent;
+position: relative;
+/* border-image: url('https://www.kindpng.com/picc/m/4-42826_wedding-borders-border-clipart-transparent-png-copy-and.png') round 100;  */
+
+border-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD11e8H1CS3O9vFdyqch_60HKH3OjjyJSSQC4lt7O9SW3SPg3-QxOxzBSs&s=10') round 85; 
+padding: 25px;
+background-color: antiquewhite;   
+border-radius: 25px;
+}
+#content2 
+{
+width: 50%;
+height: auto;
+margin: auto;
+margin-top: 5%;
+border: 45px solid transparent;
+position: relative;
+/* border-image: url('https://www.kindpng.com/picc/m/4-42826_wedding-borders-border-clipart-transparent-png-copy-and.png') round 100;  */
+
+border-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD11e8H1CS3O9vFdyqch_60HKH3OjjyJSSQC4lt7O9SW3SPg3-QxOxzBSs&s=10') round 85; 
+padding: 25px;
+background-color: lightcoral;   
+border-radius: 25px;
+}
+#content3 
+{
+width: 50%;
+height: auto;
+margin: auto;
+margin-top: 5%;
+border: 45px solid transparent;
+position: relative;
+/* border-image: url('https://www.kindpng.com/picc/m/4-42826_wedding-borders-border-clipart-transparent-png-copy-and.png') round 100;  */
+
+border-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD11e8H1CS3O9vFdyqch_60HKH3OjjyJSSQC4lt7O9SW3SPg3-QxOxzBSs&s=10') round 85; 
+padding: 25px;
+background-color: skyblue;   
+border-radius: 25px;
+}
+
+
+
+/* class selector  : class selector is used to provides diff-2 stylesheet 
+                  class selector call via . 
+                  class is not  unique 
+                  class is always  repeated 
+
+*/
+.content1 
+{
+width: 50%;
+height: auto;
+margin: auto;
+margin-top: 5%;
+border: 45px solid transparent;
+position: relative;
+/* border-image: url('https://www.kindpng.com/picc/m/4-42826_wedding-borders-border-clipart-transparent-png-copy-and.png') round 100;  */
+
+border-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD11e8H1CS3O9vFdyqch_60HKH3OjjyJSSQC4lt7O9SW3SPg3-QxOxzBSs&s=10') round 85; 
+padding: 25px;
+background-color: antiquewhite;   
+border-radius: 25px;
+}
+.content2 
+{
+width: 50%;
+height: auto;
+margin: auto;
+margin-top: 5%;
+border: 45px solid transparent;
+position: relative;
+/* border-image: url('https://www.kindpng.com/picc/m/4-42826_wedding-borders-border-clipart-transparent-png-copy-and.png') round 100;  */
+
+border-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD11e8H1CS3O9vFdyqch_60HKH3OjjyJSSQC4lt7O9SW3SPg3-QxOxzBSs&s=10') round 85; 
+padding: 25px;
+background-color: lightcoral;   
+border-radius: 25px;
+}
+.content3 
+{
+width: 50%;
+height: auto;
+margin: auto;
+margin-top: 5%;
+border: 45px solid transparent;
+position: relative;
+/* border-image: url('https://www.kindpng.com/picc/m/4-42826_wedding-borders-border-clipart-transparent-png-copy-and.png') round 100;  */
+
+border-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD11e8H1CS3O9vFdyqch_60HKH3OjjyJSSQC4lt7O9SW3SPg3-QxOxzBSs&s=10') round 85; 
+padding: 25px;
+background-color: skyblue;   
+border-radius: 25px;
+}
+
+.font-style 
+{
+color: white;
+font-family: cursive;    
+font-size: 20px;
+}
+
+h1 
+{
+font-family: suden;    
+font-size: 65px;
+letter-spacing: 4px;
+}
+h2 
+{
+font-family: hunkyfont;    
+font-size: 35px;
+letter-spacing: 4px;    
+}
+
+

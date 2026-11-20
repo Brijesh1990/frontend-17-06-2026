@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | FASHION - Influential & Innovative Fashion</title>
+  <meta name="description" content="Learn about FASHION's journey, our mission to empower individuality with premium streetwear and brand collections, and our core values.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo/logo.png">
+
+  <!-- Google Fonts Preconnect & Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <!-- Custom Stylesheet with Poppins Font-Faces and Color Tokens -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Tailwind CSS v4 Browser Runtime -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-white text-neutral-900 font-['Poppins'] antialiased selection:bg-[#EBD96B] selection:text-black">
+
+  <!-- =========================================================================
+       HEADER / NAVBAR
+       ========================================================================= -->
+  <header class="w-full bg-white sticky top-0 z-50 transition-all duration-300 border-b border-transparent shadow-sm" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 sm:h-24">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center group" aria-label="Fashion Home">
+          <img src="images/logo/logo.png" alt="FASHION" class="h-7 sm:h-8 md:h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-8 lg:space-x-12" aria-label="Main Navigation">
+          <a href="index.html#catalogue" class="text-sm lg:text-[15px] font-medium tracking-wider text-neutral-800 hover:text-black transition-colors duration-200">
+            CATALOGUE
+          </a>
+          <a href="index.html#fashion" class="text-sm lg:text-[15px] font-medium tracking-wider text-neutral-800 hover:text-black transition-colors duration-200">
+            FASHION
+          </a>
+          <a href="about.html" class="text-sm lg:text-[15px] font-bold tracking-wider text-black border-b-2 border-[#EBD96B] pb-1">
+            ABOUT US
+          </a>
+          <a href="contact.html" class="text-sm lg:text-[15px] font-medium tracking-wider text-neutral-800 hover:text-black transition-colors duration-200">
+            CONTACT
+          </a>
+          <a href="faq.html" class="text-sm lg:text-[15px] font-medium tracking-wider text-neutral-800 hover:text-black transition-colors duration-200">
+            FAQS
+          </a>
+        </nav>
+
+        <!-- Desktop Action: SIGN UP Button -->
+        <div class="hidden md:flex items-center">
+          <a href="index.html#signup" class="bg-black text-white px-6 lg:px-7 py-2.5 rounded-lg text-xs lg:text-sm font-semibold tracking-wider hover:bg-neutral-800 hover:shadow-lg active:scale-95 transition-all duration-200">
+            SIGN UP
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <div class="flex md:hidden items-center">
+          <button id="mobile-menu-btn" type="button" class="p-2 text-neutral-800 hover:text-black focus:outline-none" aria-label="Toggle Navigation Menu">
+            <svg id="hamburger-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg id="close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-neutral-200 px-6 pt-2 pb-6 space-y-4 shadow-xl">
+      <a href="index.html" class="block text-base font-semibold tracking-wide text-neutral-800 hover:text-black py-2 border-b border-neutral-100 mobile-nav-link">
+        HOME
+      </a>
+      <a href="index.html#catalogue" class="block text-base font-semibold tracking-wide text-neutral-800 hover:text-black py-2 border-b border-neutral-100 mobile-nav-link">
+        CATALOGUE
+      </a>
+      <a href="about.html" class="block text-base font-bold tracking-wide text-black py-2 border-b border-[#EBD96B] mobile-nav-link">
+        ABOUT US
+      </a>
+      <a href="contact.html" class="block text-base font-semibold tracking-wide text-neutral-800 hover:text-black py-2 border-b border-neutral-100 mobile-nav-link">
+        CONTACT US
+      </a>
+      <a href="careers.html" class="block text-base font-semibold tracking-wide text-neutral-800 hover:text-black py-2 border-b border-neutral-100 mobile-nav-link">
+        CAREERS
+      </a>
+      <a href="faq.html" class="block text-base font-semibold tracking-wide text-neutral-800 hover:text-black py-2 border-b border-neutral-100 mobile-nav-link">
+        FAQS
+      </a>
+      <div class="pt-2">
+        <a href="index.html#signup" class="block text-center bg-black text-white py-3 rounded-lg text-sm font-semibold tracking-wider hover:bg-neutral-800 active:scale-95 transition-all">
+          SIGN UP
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =======================================================================
+         HERO BANNER
+         ======================================================================= -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12 sm:pb-16">
+      <div class="relative overflow-hidden rounded-[28px] sm:rounded-[40px] bg-[#F4F6F5] p-8 sm:p-14 lg:p-20 shadow-sm" data-aos="fade-up">
+        
+        <!-- Floating Stars -->
+        <div class="absolute top-8 right-12 text-[#EBD96B] animate-float pointer-events-none">
+          <svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/>
+          </svg>
+        </div>
+
+        <div class="max-w-3xl">
+          <!-- Badge -->
+          <div class="inline-block transform -rotate-1 mb-4">
+            <span class="bg-[#EBD96B] text-black font-black text-xs sm:text-sm tracking-wider px-4 py-1.5 rounded-sm uppercase">
+              OUR STORY &amp; VISION
+            </span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-black tracking-tight uppercase leading-[1.15]">
+            WE LIVE FOR INFLUENTIAL &amp; INNOVATIVE FASHION.
+          </h1>
+
+          <p class="text-neutral-600 text-base sm:text-xl font-medium mt-6 leading-relaxed">
+            Founded with a passion for fearless streetwear, bold silhouettes, and everyday confidence. FASHION brings together world-class brands and young trends under one seamless shopping experience.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 mt-8">
+            <a href="#mission" class="bg-black text-white font-bold px-8 py-3.5 rounded-xl text-sm sm:text-base hover:bg-neutral-800 hover:scale-105 active:scale-95 transition-all duration-200">
+              Discover Our Story &darr;
+            </a>
+            <a href="contact.html" class="border-2 border-black text-black font-bold px-8 py-3.5 rounded-xl text-sm sm:text-base hover:bg-black hover:text-white transition-all duration-200">
+              Get in Touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         METRICS / NUMBERS COUNTER
+         ======================================================================= -->
+    <section class="bg-[#EBD96B] py-12 sm:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center" data-aos="zoom-in">
+          
+          <div class="p-4">
+            <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-black tracking-tight">500K+</p>
+            <p class="text-neutral-800 font-semibold text-sm sm:text-base mt-2 uppercase tracking-wide">Happy Shoppers</p>
+          </div>
+
+          <div class="p-4">
+            <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-black tracking-tight">120+</p>
+            <p class="text-neutral-800 font-semibold text-sm sm:text-base mt-2 uppercase tracking-wide">Global Brands</p>
+          </div>
+
+          <div class="p-4">
+            <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-black tracking-tight">50+</p>
+            <p class="text-neutral-800 font-semibold text-sm sm:text-base mt-2 uppercase tracking-wide">Countries Shipped</p>
+          </div>
+
+          <div class="p-4">
+            <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-black tracking-tight">99.8%</p>
+            <p class="text-neutral-800 font-semibold text-sm sm:text-base mt-2 uppercase tracking-wide">Customer Love</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         OUR MISSION & JOURNEY
+         ======================================================================= -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24" id="mission">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left Image Card -->
+        <div class="lg:col-span-5 relative" data-aos="fade-right">
+          <div class="overflow-hidden rounded-[32px] bg-neutral-100 shadow-xl aspect-[4/5]">
+            <img src="images/products/Rectangle 20.png" alt="Fashion Culture" class="w-full h-full object-cover">
+          </div>
+          <!-- Accent Card Overlay -->
+          <div class="absolute -bottom-6 -right-6 sm:bottom-6 sm:-right-8 bg-[#EBD96B] p-5 sm:p-6 rounded-2xl shadow-xl max-w-xs hidden sm:block">
+            <p class="text-2xl font-black text-black">100% Authentic</p>
+            <p class="text-xs font-medium text-neutral-800 mt-1">Directly curated from authorized global brand studios.</p>
+          </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="lg:col-span-7" data-aos="fade-left">
+          
+          <div class="relative inline-block mb-6">
+            <h2 class="text-3xl sm:text-4xl font-black text-black uppercase tracking-tight">
+              Crafting A New Culture
+            </h2>
+            <svg class="absolute -bottom-2 right-0 w-36 h-3 pointer-events-none" viewBox="0 0 200 15" fill="none">
+              <path d="M4 11 Q 100 2 196 11" stroke="#EBD96B" stroke-width="7" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <p class="text-neutral-600 text-base sm:text-lg leading-relaxed mb-6 font-normal">
+            At FASHION, we believe styling is the most natural form of self-expression. We started with a clear purpose: to bridge the gap between premium global runways and accessible everyday wardrobes for the wild, young generation.
+          </p>
+
+          <p class="text-neutral-600 text-base sm:text-lg leading-relaxed mb-8 font-normal">
+            Whether it is an ultra-comfortable hoodie for college, an iconic street jacket, or a chic top for your weekend hangout, we curate pieces that make you stand out effortlessly.
+          </p>
+
+          <!-- 3 Feature Bullets -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="p-5 rounded-2xl bg-[#F4F6F5] border border-neutral-200/60">
+              <span class="text-2xl">⚡</span>
+              <h3 class="font-bold text-lg text-black mt-2">Fast Trend Drops</h3>
+              <p class="text-sm text-neutral-500 mt-1">Weekly new arrivals that mirror international runway designs.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-[#F4F6F5] border border-neutral-200/60">
+              <span class="text-2xl">🌱</span>
+              <h3 class="font-bold text-lg text-black mt-2">Ethical Standards</h3>
+              <p class="text-sm text-neutral-500 mt-1">Partnering exclusively with brands committed to sustainable textiles.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         CORE VALUES
+         ======================================================================= -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 border-t border-neutral-100">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+        <h2 class="text-3xl sm:text-4xl font-black text-black uppercase tracking-tight">
+          What Drives Us
+        </h2>
+        <p class="text-neutral-500 text-base sm:text-lg mt-3">The four pillars that guide our designs and operations every single day.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div class="p-8 rounded-[28px] bg-[#F4F6F5] hover:bg-[#EBD96B] transition-colors duration-300 group" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-xl font-black mb-6 shadow-sm group-hover:bg-black group-hover:text-white transition-colors">
+            01
+          </div>
+          <h3 class="text-xl font-bold text-black mb-3">Bold Expression</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed">Clothing should inspire you to celebrate who you truly are without compromises.</p>
+        </div>
+
+        <div class="p-8 rounded-[28px] bg-[#F4F6F5] hover:bg-[#EBD96B] transition-colors duration-300 group" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-xl font-black mb-6 shadow-sm group-hover:bg-black group-hover:text-white transition-colors">
+            02
+          </div>
+          <h3 class="text-xl font-bold text-black mb-3">Premium Quality</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed">High-grade stitching, breathable cotton blends, and long-lasting durability.</p>
+        </div>
+
+        <div class="p-8 rounded-[28px] bg-[#F4F6F5] hover:bg-[#EBD96B] transition-colors duration-300 group" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-xl font-black mb-6 shadow-sm group-hover:bg-black group-hover:text-white transition-colors">
+            03
+          </div>
+          <h3 class="text-xl font-bold text-black mb-3">Customer First</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed">Fast 48h dispatch, hassle-free 14-day returns, and friendly direct support.</p>
+        </div>
+
+        <div class="p-8 rounded-[28px] bg-[#F4F6F5] hover:bg-[#EBD96B] transition-colors duration-300 group" data-aos="fade-up" data-aos-delay="400">
+          <div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-xl font-black mb-6 shadow-sm group-hover:bg-black group-hover:text-white transition-colors">
+            04
+          </div>
+          <h3 class="text-xl font-bold text-black mb-3">Eco Conscious</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed">Eco-friendly shipping satchels and minimal footprint packaging.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         NEWSLETTER BANNER
+         ======================================================================= -->
+    <section class="w-full bg-[#E5C643] py-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center" data-aos="zoom-in">
+        <h2 class="text-2xl sm:text-4xl font-black text-white tracking-wide uppercase leading-tight">
+          READY TO EXPLORE THE NEW COLLECTION?
+        </h2>
+        <p class="text-white text-base sm:text-lg mt-4">Browse hundreds of trending hoodies, jackets, tees and exclusive payday drops.</p>
+        <div class="mt-8">
+          <a href="index.html#catalogue" class="inline-block bg-black text-white font-bold px-10 py-4 rounded-xl text-base shadow-xl hover:bg-neutral-800 hover:scale-105 active:scale-95 transition-all">
+            Start Shopping Now &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="w-full bg-black text-white pt-20 pb-14 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 pb-16">
+        
+        <div class="lg:col-span-5">
+          <a href="index.html" class="inline-block" aria-label="Fashion Home">
+            <img src="images/logo/logo.png" alt="FASHION" class="h-7 sm:h-8 w-auto brightness-0 invert object-contain">
+          </a>
+          <p class="text-neutral-400 text-sm sm:text-base mt-6 max-w-xs font-normal leading-relaxed">
+            Complete your style with awesome clothes from us.
+          </p>
+          <div class="flex items-center gap-3.5 mt-7">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform"><img src="images/social-icons/Group 10.png" alt="Facebook" class="w-9 h-9"></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform"><img src="images/social-icons/Group 11.png" alt="Instagram" class="w-9 h-9"></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform"><img src="images/social-icons/Group 12.png" alt="Twitter" class="w-9 h-9"></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform"><img src="images/social-icons/Group 13.png" alt="LinkedIn" class="w-9 h-9"></a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2 sm:col-span-1">
+          <h3 class="text-sm sm:text-base font-semibold text-neutral-200 tracking-wider mb-5">Company</h3>
+          <ul class="space-y-3.5 text-sm sm:text-[15px] text-neutral-400 font-normal">
+            <li><a href="about.html" class="text-white font-semibold">About</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact us</a></li>
+            <li><a href="contact.html#support" class="hover:text-white transition-colors">Support</a></li>
+            <li><a href="careers.html" class="hover:text-white transition-colors">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3 sm:col-span-1">
+          <h3 class="text-sm sm:text-base font-semibold text-neutral-200 tracking-wider mb-5">Quick Link</h3>
+          <ul class="space-y-3.5 text-sm sm:text-[15px] text-neutral-400 font-normal">
+            <li><a href="index.html#lifestyle" class="hover:text-white transition-colors">Share Location</a></li>
+            <li><a href="faq.html#orders" class="hover:text-white transition-colors">Orders Tracking</a></li>
+            <li><a href="faq.html#sizing" class="hover:text-white transition-colors">Size Guide</a></li>
+            <li><a href="faq.html" class="hover:text-white transition-colors">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2 sm:col-span-1">
+          <h3 class="text-sm sm:text-base font-semibold text-neutral-200 tracking-wider mb-5">Legal</h3>
+          <ul class="space-y-3.5 text-sm sm:text-[15px] text-neutral-400 font-normal">
+            <li><a href="faq.html#terms" class="hover:text-white transition-colors">Terms &amp; conditions</a></li>
+            <li><a href="faq.html#privacy" class="hover:text-white transition-colors">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm text-neutral-500 gap-4">
+        <p>&copy; 2026 FASHION Inc. All rights reserved.</p>
+        <p>Fashion e-commerce selling all brands clothes | Contacts: <a href="tel:9998003879" class="text-neutral-400 hover:text-white font-medium">9998003879</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true, offset: 40 });
+
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if (isHidden) {
+          mobileMenu.classList.remove('hidden');
+          hamburgerIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+        } else {
+          mobileMenu.classList.add('hidden');
+          hamburgerIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
