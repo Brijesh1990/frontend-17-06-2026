@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<p id="para">Hey : Brijesh</p>
+<button type="button" id="btn">Click here</button>
+<script>
+// addEventListener is used in advanced javascript
+// addEventListener is used as events in js 
+// addEventListener is always call with callback function 
+
+var btn=document.getElementById("btn");
+// btn.addEventListener("click",function(){
+//    document.getElementById("para").style="color:red; text-align:center; font-size:45px; transition:2s ease all"
+// })
+
+// btn.addEventListener("mouseover",function(){
+//    document.getElementById("para").style="color:red; text-align:center; font-size:45px; transition:2s ease all"
+// })
+
+
+// btn.addEventListener("dblclick",function(){
+//    document.getElementById("para").style="color:red; text-align:center; font-size:45px; transition:2s ease all"
+// })
+
+btn.addEventListener("keypress",function(){
+   document.getElementById("para").style="color:red; text-align:center; font-size:45px; transition:2s ease all"
+})
+
+
+</script>
+</body>
+</html>

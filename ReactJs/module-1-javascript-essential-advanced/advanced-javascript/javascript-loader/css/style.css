@@ -1,0 +1,310 @@
+
+@import "tailwindcss";
+
+/* ========================================
+   GLOBAL SETTINGS
+======================================== */
+
+:root {
+    --brand: #216b4e;
+    --mint: #e8f4ed;
+    --paper: #f8faf6;
+    --ink: #1d3028;
+    --muted: #718078;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: "DM Sans", sans-serif;
+    color: var(--ink);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.section-wrap {
+    width: min(100% - 40px, 1200px);
+    margin-inline: auto;
+}
+
+/* ========================================
+   CUSTOM CARDS
+======================================== */
+
+.soft-card {
+    background: white;
+    border-radius: 1.75rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.soft-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* ========================================
+   SECTION LABEL
+======================================== */
+
+.eyebrow {
+    color: var(--brand);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+/* ========================================
+   ICON BOX
+======================================== */
+
+.icon-box {
+    display: flex;
+    width: 3.25rem;
+    height: 3.25rem;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 1rem;
+    background: var(--mint);
+}
+
+/* ========================================
+   LOADER
+======================================== */
+
+#loader {
+    width: min(450px, 90vw);
+    aspect-ratio: 450 / 400;
+    height: auto;
+    background: url("../images/loader.gif") no-repeat center;
+    background-size: contain;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+#main {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+header {
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+section {
+    width: 100%;
+}
+
+section img {
+    object-fit: cover;
+}
+
+/* ========================================
+   MOBILE MENU
+======================================== */
+
+#mobile-menu {
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    width: 100%;
+}
+
+/* ========================================
+   LARGE LAPTOP (1200px)
+======================================== */
+
+@media (max-width: 1200px) {
+
+    .section-wrap {
+        width: min(100% - 40px, 1100px);
+    }
+
+}
+
+/* ========================================
+   TABLET (992px)
+======================================== */
+
+@media (max-width: 992px) {
+
+    .section-wrap {
+        width: calc(100% - 40px);
+    }
+
+    .soft-card {
+        border-radius: 1.5rem;
+    }
+
+    #loader {
+        width: min(400px, 85vw);
+    }
+
+}
+
+/* ========================================
+   SMALL TABLET (768px)
+======================================== */
+
+@media (max-width: 768px) {
+
+    .section-wrap {
+        width: calc(100% - 32px);
+    }
+
+    header nav {
+        height: 70px;
+    }
+
+    .soft-card {
+        border-radius: 1.4rem;
+    }
+
+    #loader {
+        width: min(350px, 85vw);
+    }
+
+    footer {
+        text-align: center;
+    }
+
+}
+
+/* ========================================
+   MOBILE (576px)
+======================================== */
+
+@media (max-width: 576px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .section-wrap {
+        width: calc(100% - 28px);
+    }
+
+    .soft-card {
+        border-radius: 1.25rem;
+    }
+
+    .eyebrow {
+        font-size: 0.68rem;
+        letter-spacing: 0.12em;
+    }
+
+    .icon-box {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    #loader {
+        width: 85vw;
+        max-width: 320px;
+    }
+
+    #mobile-menu {
+        padding-bottom: 15px;
+    }
+
+    footer {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+}
+
+/* ========================================
+   EXTRA SMALL MOBILE (375px)
+======================================== */
+
+@media (max-width: 375px) {
+
+    .section-wrap {
+        width: calc(100% - 24px);
+    }
+
+    .soft-card {
+        border-radius: 1rem;
+    }
+
+    .icon-box {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    #loader {
+        width: 90vw;
+    }
+
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}

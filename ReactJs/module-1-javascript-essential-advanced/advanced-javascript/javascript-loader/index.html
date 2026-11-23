@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+name="description"
+content="Keep your pets happy and healthy with Pawly, your all-in-one pet care dashboard."
+/>
+<title>Pawly — Happy pets, healthier days</title>
+ <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+rel="stylesheet"
+/>
+<link
+rel="stylesheet"
+href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+/>
+
+<link
+rel="stylesheet"
+href="css/style.css"
+/>
+<style type="text/tailwindcss">
+
+@theme {
+    --color-brand: #216b4e !important;
+    --color-mint: #e8f4ed !important;
+    --color-paper: #f8faf6 !important;
+    --color-ink: #1d3028 !important;
+    --color-muted: #718078 !important;
+
+    --font-display: "Manrope", sans-serif !important;
+    --font-sans: "DM Sans", sans-serif !;
+}
+
+</style>
+</head>
+<body onload="mainFunction()">
+<div id="loader"></div>
+<main id="main">  
+<header class="relative z-20">
+<nav class="section-wrap flex h-[82px] items-center justify-between" aria-label="Main navigation">
+<a href="#" class="flex items-center gap-2.5" aria-label="Pawly home">
+<span class="flex size-10 items-center justify-center rounded-[14px] bg-brand text-white">
+<svg viewBox="0 0 24 24" fill="none" class="size-6" aria-hidden="true">
+<path d="M12 20.25c-2.6-1.6-7.5-5.3-7.5-10.1a4.1 4.1 0 0 1 7.5-2.3 4.1 4.1 0 0 1 7.5 2.3c0 4.8-4.9 8.5-7.5 10.1Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M8.8 12.2c.8-.8 1.6-1.2 3.2-1.2s2.4.4 3.2 1.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+</svg>
+</span>
+<span class="font-display text-[1.45rem] font-extrabold tracking-tight">pawly<span class="text-brand">.</span></span>
+</a>
+
+<div class="hidden items-center gap-9 text-sm font-semibold text-ink/70 md:flex">
+<a class="transition hover:text-brand" href="#pets">My pets</a>
+<a class="transition hover:text-brand" href="#care">Care planner</a>
+<a class="transition hover:text-brand" href="#services">Services</a>
+<a class="transition hover:text-brand" href="#community">Community</a>
+</div>
+
+<div class="hidden items-center gap-3 md:flex">
+<button type="button" class="rounded-full px-4 py-2.5 text-sm font-bold text-ink transition hover:bg-black/5">Log in</button>
+<a href="#get-started" class="rounded-full bg-brand px-5 py-3 text-sm font-bold text-white shadow-lg shadow-brand/15 transition hover:-translate-y-0.5 hover:bg-[#195842]">Get started <span aria-hidden="true">↗</span></a>
+</div>
+
+<button id="menu-toggle" type="button" class="flex size-11 items-center justify-center rounded-full border border-black/10 text-ink md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+<svg id="menu-icon" viewBox="0 0 24 24" fill="none" class="size-5" aria-hidden="true">
+<path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+</svg>
+</button>
+</nav>
+<div id="mobile-menu" class="section-wrap hidden pb-5 md:hidden">
+<div class="grid gap-1 rounded-3xl border border-black/5 bg-white p-3 shadow-xl">
+<a class="rounded-2xl px-4 py-3 font-semibold hover:bg-mint" href="#pets">My pets</a>
+<a class="rounded-2xl px-4 py-3 font-semibold hover:bg-mint" href="#care">Care planner</a>
+<a class="rounded-2xl px-4 py-3 font-semibold hover:bg-mint" href="#services">Services</a>
+<a class="rounded-2xl px-4 py-3 font-semibold hover:bg-mint" href="#community">Community</a>
+<a class="mt-1 rounded-full bg-brand px-4 py-3 text-center font-bold text-white" href="#get-started">Get started ↗</a>
+</div>
+</div>
+</header>
+
+<main>
+<section class="section-wrap grid items-center gap-10 pb-16 pt-8 sm:pb-20 sm:pt-12 lg:grid-cols-[1.03fr_0.97fr] lg:gap-14 lg:pb-28 lg:pt-14">
+<div data-aos="fade-up" data-aos-duration="800">
+<div class="mb-6 inline-flex items-center gap-2 rounded-full border border-brand/10 bg-white px-3.5 py-2 text-xs font-bold text-brand shadow-sm sm:text-sm">
+<span class="flex size-6 items-center justify-center rounded-full bg-mint">🐾</span>
+A little more love in every day
+</div>
+<h1 class="max-w-2xl font-display text-[2.8rem] leading-[1.08] font-extrabold tracking-[-0.055em] sm:text-6xl lg:text-[4.25rem]">
+Their whole world.<br />
+<span class="text-brand">A little easier</span> for you.
+</h1>
+<p class="mt-6 max-w-lg text-base leading-7 text-muted sm:text-lg sm:leading-8">
+All the little things that make a big difference. Keep your pet's care, health, and happy moments together in one lovely place.
+</p>
+<div class="mt-8 flex flex-col gap-3 sm:flex-row">
+<a href="#get-started" class="inline-flex items-center justify-center gap-3 rounded-full bg-brand px-7 py-4 font-bold text-white shadow-xl shadow-brand/15 transition hover:-translate-y-1 hover:bg-[#195842]">
+Start your free account
+<span class="flex size-7 items-center justify-center rounded-full bg-white/15" aria-hidden="true">↗</span>
+</a>
+<a href="#how-it-works" class="inline-flex items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-7 py-4 font-bold transition hover:border-brand/30 hover:bg-mint">
+<span class="flex size-7 items-center justify-center rounded-full bg-mint text-brand" aria-hidden="true">▶</span>
+See how it works
+</a>
+</div>
+<div class="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted">
+<div class="flex -space-x-2" aria-label="Loved by pet parents">
+<img class="size-9 rounded-full border-2 border-paper object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="" />
+<img class="size-9 rounded-full border-2 border-paper object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&q=80" alt="" />
+<img class="size-9 rounded-full border-2 border-paper object-cover" src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=80&q=80" alt="" />
+</div>
+<span><strong class="text-ink">Loved by 12,000+</strong> pet parents</span>
+<span class="text-amber-500" aria-label="5 out of 5 stars">★★★★★</span>
+</div>
+</div>
+
+<div class="relative mx-auto w-full max-w-[600px]" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="150">
+<div class="absolute -left-3 top-12 z-10 hidden -rotate-6 rounded-[1.4rem] bg-white p-4 shadow-xl sm:block sm:-left-7 sm:p-5" data-aos="fade-right" data-aos-delay="500">
+<div class="flex items-center gap-3">
+<div class="flex size-11 items-center justify-center rounded-2xl bg-[#fff3dd] text-xl">🦴</div>
+<div>
+<p class="text-xs text-muted">Today's little win</p>
+<p class="text-sm font-extrabold">Walkies: done!</p>
+</div>
+<span class="ml-1 text-brand">✓</span>
+</div>
+</div>
+<div class="absolute -right-2 bottom-12 z-10 hidden rotate-3 rounded-[1.4rem] bg-white p-4 shadow-xl sm:block sm:-right-5 sm:p-5" data-aos="fade-left" data-aos-delay="650">
+<p class="mb-2 text-xs font-semibold text-muted">Next up · 2:30 PM</p>
+<div class="flex items-center gap-3">
+<div class="flex size-10 items-center justify-center rounded-2xl bg-[#fce9e5] text-lg">🩺</div>
+<div>
+<p class="text-sm font-extrabold">Vet check-up</p>
+<p class="text-xs text-muted">Greenwood Vet Clinic</p>
+</div>
+</div>
+</div>
+<div class="absolute -left-2 bottom-5 size-20 rounded-full bg-[#f5d992] sm:-left-8 sm:bottom-8 sm:size-28"></div>
+<div class="absolute right-4 top-0 size-16 rounded-full bg-[#bed8c4] sm:right-9 sm:size-24"></div>
+<div class="relative mx-3 overflow-hidden rounded-[2rem] rounded-tr-[7rem] sm:mx-8 sm:rounded-[2.7rem] sm:rounded-tr-[9rem]">
+<img class="aspect-[0.92] w-full object-cover object-center sm:aspect-[1.02]" src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1100&q=85" alt="A happy golden retriever enjoying time outdoors" fetchpriority="high" />
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/50 to-transparent px-6 pb-6 pt-20 text-white sm:px-8 sm:pb-8">
+<p class="font-display text-2xl font-extrabold sm:text-3xl">Meet Cooper <span aria-hidden="true">🐶</span></p>
+<p class="mt-1 text-sm text-white/85">Professional treat inspector · 4 years</p>
+</div>
+</div>
+<div class="absolute -right-1 top-1/2 -translate-y-1/2 text-brand/75" aria-hidden="true">
+<svg viewBox="0 0 50 50" fill="none" class="size-9 sm:size-12"><path d="M25 2v46M2 25h46M8.7 8.7l32.6 32.6M41.3 8.7 8.7 41.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+</div>
+</div>
+</section>
+
+<section id="pets" class="bg-white py-16 sm:py-20 lg:py-24">
+<div class="section-wrap">
+<div class="mb-9 flex flex-col justify-between gap-4 sm:mb-12 sm:flex-row sm:items-end" data-aos="fade-up">
+<div>
+<p class="eyebrow">One happy home</p>
+<h2 class="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">Your whole crew, covered.</h2>
+</div>
+<p class="max-w-md leading-7 text-muted">Every pet is different. Pawly keeps their routines and needs right where you need them.</p>
+</div>
+<div class="grid gap-5 md:grid-cols-3">
+<article class="soft-card group overflow-hidden transition duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="0">
+<div class="relative h-52 overflow-hidden sm:h-60">
+<img class="h-full w-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=700&q=80" alt="Cooper the golden retriever" loading="lazy" />
+<span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold text-brand backdrop-blur">DOG</span>
+<span class="absolute right-4 top-4 flex size-9 items-center justify-center rounded-full bg-white/90 text-brand" aria-label="Favorite">♡</span>
+</div>
+<div class="p-5 sm:p-6">
+<div class="flex items-start justify-between gap-2">
+<div><h3 class="font-display text-xl font-extrabold">Cooper</h3><p class="mt-1 text-sm text-muted">Golden Retriever · 4 yrs</p></div>
+<span class="rounded-full bg-[#fef4df] px-3 py-1.5 text-xs font-bold text-[#9a6a13]">Feeling great ✨</span>
+</div>
+<div class="mt-5 grid grid-cols-2 gap-3 border-t border-black/5 pt-4 text-sm">
+<div><p class="text-xs text-muted">Next vaccine</p><p class="mt-1 font-bold">Aug 24, 2025</p></div>
+<div><p class="text-xs text-muted">Daily walks</p><p class="mt-1 font-bold">2 of 3 complete</p></div>
+</div>
+</div>
+</article>
+<article class="soft-card group overflow-hidden transition duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="120">
+<div class="relative h-52 overflow-hidden sm:h-60">
+<img class="h-full w-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=700&q=80" alt="Luna the curious tabby cat" loading="lazy" />
+<span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold text-brand backdrop-blur">CAT</span>
+<span class="absolute right-4 top-4 flex size-9 items-center justify-center rounded-full bg-white/90 text-brand" aria-label="Favorite">♡</span>
+</div>
+<div class="p-5 sm:p-6">
+<div class="flex items-start justify-between gap-2">
+<div><h3 class="font-display text-xl font-extrabold">Luna</h3><p class="mt-1 text-sm text-muted">Tabby cat · 2 yrs</p></div>
+<span class="rounded-full bg-[#f2eafb] px-3 py-1.5 text-xs font-bold text-[#76539c]">Little star ✨</span>
+</div>
+<div class="mt-5 grid grid-cols-2 gap-3 border-t border-black/5 pt-4 text-sm">
+<div><p class="text-xs text-muted">Next checkup</p><p class="mt-1 font-bold">Sep 02, 2025</p></div>
+<div><p class="text-xs text-muted">Meal plan</p><p class="mt-1 font-bold">3 meals a day</p></div>
+</div>
+</div>
+</article>
+<a href="#get-started" class="flex min-h-[360px] flex-col items-center justify-center rounded-[1.75rem] border-2 border-dashed border-brand/20 bg-mint/50 p-8 text-center transition hover:border-brand/50 hover:bg-mint sm:min-h-[410px]" data-aos="fade-up" data-aos-delay="240">
+<span class="flex size-16 items-center justify-center rounded-full bg-white text-3xl text-brand shadow-sm transition hover:rotate-90">+</span>
+<h3 class="mt-5 font-display text-xl font-extrabold">Add your next bestie</h3>
+<p class="mt-2 max-w-[220px] text-sm leading-6 text-muted">Build a profile and keep all their important details together.</p>
+<span class="mt-5 text-sm font-bold text-brand">Add a pet <span aria-hidden="true">↗</span></span>
+</a>
+</div>
+</div>
+</section>
+
+<section id="care" class="section-wrap py-16 sm:py-20 lg:py-24">
+<div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
+<div data-aos="fade-right">
+<p class="eyebrow">A routine that feels good</p>
+<h2 class="mt-3 max-w-xl font-display text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl lg:text-[2.7rem]">Little reminders.<br />A lot less to remember.</h2>
+<p class="mt-5 max-w-lg leading-7 text-muted">From dinner time to vet visits, create a routine that works for your pet and your real life. We'll give you a gentle nudge when it's time.</p>
+<a href="#get-started" class="mt-7 inline-flex items-center gap-2 font-bold text-brand transition hover:gap-4">Explore the care planner <span aria-hidden="true">→</span></a>
+<div class="mt-8 grid gap-4 sm:grid-cols-2">
+<div class="flex gap-3"><span class="flex size-9 shrink-0 items-center justify-center rounded-full bg-white text-brand shadow-sm">✓</span><p class="text-sm leading-6 text-muted"><strong class="text-ink">Health records</strong><br />Vaccines, visits, and more</p></div>
+<div class="flex gap-3"><span class="flex size-9 shrink-0 items-center justify-center rounded-full bg-white text-brand shadow-sm">✓</span><p class="text-sm leading-6 text-muted"><strong class="text-ink">Daily routines</strong><br />Meals, walks, and meds</p></div>
+</div>
+</div>
+<div class="soft-card relative overflow-hidden p-5 sm:p-8" data-aos="fade-left">
+<div class="absolute -right-14 -top-14 size-44 rounded-full bg-mint"></div>
+<div class="relative flex items-center justify-between">
+<div><p class="text-sm font-semibold text-muted">Tuesday, June 17</p><h3 class="mt-1 font-display text-2xl font-extrabold">Cooper's day</h3></div>
+<button type="button" aria-label="More care planner options" class="flex size-10 items-center justify-center rounded-full bg-paper text-xl">···</button>
+</div>
+<div class="relative mt-6 space-y-3">
+<div class="flex items-center gap-4 rounded-2xl bg-paper p-4">
+<span class="icon-box bg-[#fff3dd] text-xl" aria-hidden="true">🍽️</span>
+<div class="min-w-0 flex-1"><p class="text-xs font-semibold text-muted">8:00 AM · MEAL</p><p class="mt-1 font-bold">Breakfast & vitamins</p></div>
+<span class="flex size-7 items-center justify-center rounded-full bg-brand text-sm text-white" aria-label="Completed">✓</span>
+</div>
+<div class="flex items-center gap-4 rounded-2xl border border-brand/15 bg-white p-4 shadow-sm">
+<span class="icon-box bg-[#e8f2f8] text-xl" aria-hidden="true">🦮</span>
+<div class="min-w-0 flex-1"><p class="text-xs font-semibold text-muted">11:30 AM · ACTIVITY</p><p class="mt-1 font-bold">Neighborhood walk</p></div>
+<span class="rounded-full bg-[#fff3dd] px-2.5 py-1 text-xs font-bold text-[#9a6a13]">Next up</span>
+</div>
+<div class="flex items-center gap-4 rounded-2xl bg-paper p-4">
+<span class="icon-box bg-[#fce9e5] text-xl" aria-hidden="true">🩺</span>
+<div class="min-w-0 flex-1"><p class="text-xs font-semibold text-muted">2:30 PM · APPOINTMENT</p><p class="mt-1 font-bold">Annual wellness check</p></div>
+<span class="text-sm font-bold text-muted">›</span>
+</div>
+</div>
+<div class="relative mt-5 flex items-center justify-between rounded-2xl bg-brand p-4 text-white">
+<div><p class="text-xs text-white/70">This week's progress</p><p class="mt-1 font-bold">You're doing pawsome!</p></div>
+<div class="flex size-12 items-center justify-center rounded-full border-4 border-white/30 text-sm font-extrabold">85%</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="services" class="bg-[#eef4ef] py-16 sm:py-20 lg:py-24">
+<div class="section-wrap">
+<div class="mx-auto max-w-2xl text-center" data-aos="fade-up">
+<p class="eyebrow">Good care, made simple</p>
+<h2 class="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">Everything your sidekick needs.</h2>
+<p class="mt-4 leading-7 text-muted">A few thoughtful tools to make every tail wag and every purr a little easier.</p>
+</div>
+<div class="mt-10 grid gap-4 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4">
+<article class="rounded-[1.6rem] bg-white p-6 transition duration-300 hover:-translate-y-2 hover:shadow-lg" data-aos="fade-up">
+<div class="icon-box text-2xl">🩺</div><h3 class="mt-5 font-display text-lg font-extrabold">Health, in one place</h3><p class="mt-2 text-sm leading-6 text-muted">Keep checkups, medications, and important notes close at hand.</p>
+</article>
+<article class="rounded-[1.6rem] bg-white p-6 transition duration-300 hover:-translate-y-2 hover:shadow-lg" data-aos="fade-up" data-aos-delay="100">
+<div class="icon-box bg-[#fff3dd] text-2xl">⏰</div><h3 class="mt-5 font-display text-lg font-extrabold">Gentle reminders</h3><p class="mt-2 text-sm leading-6 text-muted">Never miss a meal, a walk, or a well-deserved treat.</p>
+</article>
+<article class="rounded-[1.6rem] bg-white p-6 transition duration-300 hover:-translate-y-2 hover:shadow-lg" data-aos="fade-up" data-aos-delay="200">
+<div class="icon-box bg-[#f2eafb] text-2xl">📸</div><h3 class="mt-5 font-display text-lg font-extrabold">Memory keeper</h3><p class="mt-2 text-sm leading-6 text-muted">Save their milestones and those too-cute-to-forget moments.</p>
+</article>
+<article class="rounded-[1.6rem] bg-white p-6 transition duration-300 hover:-translate-y-2 hover:shadow-lg" data-aos="fade-up" data-aos-delay="300">
+<div class="icon-box bg-[#fce9e5] text-2xl">🤝</div><h3 class="mt-5 font-display text-lg font-extrabold">Care team ready</h3><p class="mt-2 text-sm leading-6 text-muted">Share the details with everyone who helps your pet thrive.</p>
+</article>
+</div>
+</div>
+</section>
+
+<section id="how-it-works" class="section-wrap py-16 sm:py-20 lg:py-24">
+<div class="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+<div class="relative" data-aos="zoom-in">
+<div class="absolute -left-3 top-5 size-24 rounded-full bg-[#f5d992] sm:-left-7 sm:size-32"></div>
+<img class="relative aspect-[1.1] w-full rounded-[2rem] object-cover sm:rounded-[2.5rem]" src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=900&q=85" alt="A pet parent spending a happy moment with their dog" loading="lazy" />
+<div class="absolute -bottom-5 right-3 rounded-2xl bg-white px-5 py-4 shadow-xl sm:right-8 sm:px-6"><p class="text-xs text-muted">A happy little reminder</p><p class="mt-1 font-display font-extrabold">Make time for belly rubs ✨</p></div>
+</div>
+<div data-aos="fade-left">
+<p class="eyebrow">A better kind of busy</p>
+<h2 class="mt-3 font-display text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">More present with them.<br />Less in your head.</h2>
+<p class="mt-5 leading-7 text-muted">We take the mental load out of pet care, so you can spend less time remembering and more time right where they want you: by their side.</p>
+<div class="mt-8 space-y-6">
+<div class="flex gap-4"><span class="flex size-10 shrink-0 items-center justify-center rounded-full bg-brand font-display font-extrabold text-white">1</span><div><h3 class="font-display font-extrabold">Make their little profile</h3><p class="mt-1 text-sm leading-6 text-muted">Add your pet's details, routines, and the things that make them them.</p></div></div>
+<div class="flex gap-4"><span class="flex size-10 shrink-0 items-center justify-center rounded-full bg-brand font-display font-extrabold text-white">2</span><div><h3 class="font-display font-extrabold">Set up care your way</h3><p class="mt-1 text-sm leading-6 text-muted">Keep track of the everyday stuff and the important appointments.</p></div></div>
+<div class="flex gap-4"><span class="flex size-10 shrink-0 items-center justify-center rounded-full bg-brand font-display font-extrabold text-white">3</span><div><h3 class="font-display font-extrabold">Enjoy the good stuff</h3><p class="mt-1 text-sm leading-6 text-muted">We'll help with the reminders. You take the extra cuddle time.</p></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="community" class="section-wrap pb-16 sm:pb-20 lg:pb-24">
+<div class="overflow-hidden rounded-[2rem] bg-brand px-6 py-10 text-white sm:rounded-[2.5rem] sm:px-12 sm:py-14 lg:px-16" data-aos="zoom-in-up">
+<div class="grid items-center gap-8 lg:grid-cols-[1fr_auto]">
+<div>
+<p class="text-xs font-bold tracking-[0.18em] text-white/65 uppercase">Good humans, great pets</p>
+<h2 class="mt-3 max-w-2xl font-display text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">Because the best pet parents don't have to do it all alone.</h2>
+<p class="mt-4 max-w-xl leading-7 text-white/75">Find your people, trade tips, and celebrate the little wins with a community that just gets it.</p>
+<a href="#get-started" class="mt-7 inline-flex items-center gap-3 rounded-full bg-white px-6 py-3.5 font-bold text-brand transition hover:-translate-y-1 hover:shadow-lg">Meet your community <span aria-hidden="true">↗</span></a>
+</div>
+<div class="hidden items-center justify-center lg:flex" aria-hidden="true">
+<div class="flex size-44 items-center justify-center rounded-full border border-white/20 bg-white/10 text-7xl">🐕</div>
+<span class="-ml-5 -mt-24 flex size-16 items-center justify-center rounded-full bg-[#f5d992] text-3xl">🐈</span>
+<span class="-ml-3 mt-28 flex size-14 items-center justify-center rounded-full bg-[#fce9e5] text-2xl">🐾</span>
+</div>
+</div>
+</div>
+</section>
+
+<section id="get-started" class="border-y border-black/5 bg-white py-14 sm:py-16">
+<div class="section-wrap flex flex-col items-center text-center" data-aos="fade-up">
+<span class="text-4xl" aria-hidden="true">🐾</span>
+<h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">Ready for more happy days?</h2>
+<p class="mt-3 max-w-lg leading-7 text-muted">Start your free Pawly account and give your pet's care a home of its own.</p>
+<a href="mailto:hello@pawly.example?subject=I'd%20love%20to%20try%20Pawly" class="mt-6 rounded-full bg-brand px-7 py-4 font-bold text-white shadow-lg shadow-brand/15 transition hover:-translate-y-1 hover:bg-[#195842]">Create your free account <span aria-hidden="true">↗</span></a>
+<p class="mt-3 text-xs text-muted">Free to get started · No credit card needed</p>
+</div>
+</section>
+</main>
+
+<footer class="section-wrap py-8 sm:py-10">
+<div class="flex flex-col items-center justify-between gap-5 sm:flex-row">
+<a href="#" class="flex items-center gap-2 font-display text-xl font-extrabold">🐾 pawly<span class="text-brand">.</span></a>
+<p class="text-center text-sm text-muted">Made with love for the ones who make a house a home.</p>
+<div class="flex gap-5 text-sm font-semibold text-muted"><a class="transition hover:text-brand" href="#pets">Pets</a><a class="transition hover:text-brand" href="#care">Care</a><a class="transition hover:text-brand" href="#community">Community</a></div>
+</div>
+<p class="mt-6 border-t border-black/5 pt-5 text-center text-xs text-muted">© 2025 Pawly. All tails welcome.</p>
+</footer>
+</main>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
