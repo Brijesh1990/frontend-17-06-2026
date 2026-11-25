@@ -1,0 +1,581 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Create your Pawly account and give your pets the best care.">
+
+<title>Register | Pawly - Happy Pets, Healthier Days</title>
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<style type="text/tailwindcss">
+@theme {
+    --color-brand: #216b4e;
+    --color-mint: #e8f4ed;
+    --color-paper: #f8faf6;
+    --color-ink: #1d3028;
+    --color-muted: #718078;
+
+    --font-display: "Manrope", sans-serif;
+    --font-sans: "DM Sans", sans-serif;
+}
+</style>
+
+<style>
+body {
+    font-family: "DM Sans", sans-serif;
+}
+
+.pet-float {
+    animation: petFloat 4s ease-in-out infinite;
+}
+
+@keyframes petFloat {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.register-card {
+    animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-input {
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #216b4e;
+    box-shadow: 0 0 0 4px rgba(33,107,78,.10);
+}
+
+.register-btn {
+    transition: all .3s ease;
+}
+
+.register-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(33,107,78,.2);
+}
+
+</style>
+</head>
+
+<body class="bg-paper">
+
+<!-- HEADER -->
+<header class="border-b border-black/5 bg-white">
+    <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+
+        <a href="index.html"
+           class="flex items-center gap-2 font-display text-2xl font-extrabold text-ink">
+
+            <span class="flex size-11 items-center justify-center rounded-2xl bg-brand text-xl text-white">
+                🐾
+            </span>
+
+            pawly<span class="text-brand">.</span>
+        </a>
+
+        <a href="login.html"
+           class="rounded-full border border-brand/20 px-6 py-3 text-sm font-bold text-brand transition hover:bg-mint">
+            Login ↗
+        </a>
+
+    </nav>
+</header>
+
+
+<!-- REGISTER SECTION -->
+<main class="mx-auto grid max-w-7xl items-center gap-10 px-5 py-12 lg:grid-cols-[.85fr_1.15fr] lg:gap-14 lg:py-16">
+
+
+    <!-- LEFT GRID -->
+    <section class="relative overflow-hidden rounded-[2.5rem] bg-mint p-7 text-center sm:p-10 lg:sticky lg:top-8">
+
+        <div class="absolute -right-20 -top-20 size-64 rounded-full bg-white/50"></div>
+        <div class="absolute -bottom-20 -left-20 size-64 rounded-full bg-brand/5"></div>
+
+        <div class="relative z-10">
+
+            <span class="inline-block rounded-full bg-white px-5 py-2 text-xs font-bold uppercase tracking-widest text-brand">
+                🐾 Join Pawly Family
+            </span>
+
+            <h1 class="mt-7 font-display text-4xl font-extrabold leading-tight text-ink sm:text-5xl">
+
+                Create Your
+                <span class="block text-brand">Pet Care World!</span>
+
+            </h1>
+
+            <p class="mt-5 leading-7 text-muted">
+                Join our loving pet community and manage all your
+                pet care needs in one beautiful place.
+            </p>
+
+            <div class="pet-float my-8 flex justify-center">
+                <img
+                    src="images/register-pet.png"
+                    alt="Cute dog and cat"
+                    class="h-64 w-full max-w-sm object-contain"
+                    onerror="this.style.display='none';document.getElementById('register-emoji').style.display='block';">
+
+                <div id="register-emoji" class="hidden text-9xl">
+                    🐶🐱
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 text-left">
+
+                <div class="rounded-2xl bg-white p-4">
+                    <div class="text-2xl">❤️</div>
+                    <h3 class="mt-2 font-bold text-ink">Pet Healthcare</h3>
+                    <p class="mt-1 text-xs text-muted">Track pet health easily.</p>
+                </div>
+
+                <div class="rounded-2xl bg-white p-4">
+                    <div class="text-2xl">🩺</div>
+                    <h3 class="mt-2 font-bold text-ink">Vet Support</h3>
+                    <p class="mt-1 text-xs text-muted">Connect with experts.</p>
+                </div>
+
+                <div class="rounded-2xl bg-white p-4">
+                    <div class="text-2xl">✂️</div>
+                    <h3 class="mt-2 font-bold text-ink">Grooming</h3>
+                    <p class="mt-1 text-xs text-muted">Keep pets looking great.</p>
+                </div>
+
+                <div class="rounded-2xl bg-white p-4">
+                    <div class="text-2xl">🐾</div>
+                    <h3 class="mt-2 font-bold text-ink">Pet Community</h3>
+                    <p class="mt-1 text-xs text-muted">Meet pet lovers.</p>
+                </div>
+
+            </div>
+
+            <p class="mt-7 text-sm font-semibold text-brand">
+                Made with 💚 for every furry friend.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- RIGHT GRID: REGISTRATION FORM -->
+    <section class="register-card rounded-[2rem] border border-black/5 bg-white p-6 shadow-[0_15px_60px_rgba(29,48,40,0.08)] sm:p-9">
+
+        <div class="mb-8">
+
+            <span class="text-xs font-bold uppercase tracking-widest text-brand">
+                Create Account
+            </span>
+
+            <h2 class="mt-3 font-display text-3xl font-extrabold text-ink sm:text-4xl">
+                Join Pawly Today!
+            </h2>
+
+            <p class="mt-3 text-sm leading-6 text-muted">
+                Enter your details below to create your personal account.
+            </p>
+
+        </div>
+
+
+        <form id="registerForm" onsubmit="return validateRegister(event)" class="space-y-7">
+
+            <!-- PERSONAL INFORMATION -->
+            <div>
+
+                <h3 class="mb-5 flex items-center gap-2 font-display text-lg font-extrabold text-ink">
+                    <span class="flex size-8 items-center justify-center rounded-lg bg-mint text-brand">01</span>
+                    Personal Information
+                </h3>
+
+                <div class="grid gap-5 sm:grid-cols-2">
+
+                    <div>
+                        <label for="firstName" class="mb-2 block text-sm font-bold text-ink">
+                            First Name *
+                        </label>
+
+                        <input type="text" id="firstName" name="firstName"
+                               placeholder="Enter first name"
+                               autocomplete="given-name"
+                               required
+                               class="form-input w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm outline-none">
+                    </div>
+
+                    <div>
+                        <label for="lastName" class="mb-2 block text-sm font-bold text-ink">
+                            Last Name *
+                        </label>
+
+                        <input type="text" id="lastName" name="lastName"
+                               placeholder="Enter last name"
+                               autocomplete="family-name"
+                               required
+                               class="form-input w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm outline-none">
+                    </div>
+
+                    <div>
+                        <label for="email" class="mb-2 block text-sm font-bold text-ink">
+                            Email Address *
+                        </label>
+
+                        <input type="email" id="email" name="email"
+                               placeholder="example@gmail.com"
+                               autocomplete="email"
+                               required
+                               class="form-input w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm outline-none">
+                    </div>
+
+                    <div>
+                        <label for="phone" class="mb-2 block text-sm font-bold text-ink">
+                            Mobile Number *
+                        </label>
+
+                        <input type="tel" id="phone" name="phone"
+                               placeholder="10 digit mobile number"
+                               maxlength="10"
+                               inputmode="numeric"
+                               autocomplete="tel"
+                               required
+                               class="form-input w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm outline-none">
+                    </div>
+
+                    <div>
+                        <label for="gender" class="mb-2 block text-sm font-bold text-ink">
+                            Gender
+                        </label>
+
+                        <select id="gender" name="gender"
+                                class="form-input w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm outline-none">
+
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                            <option value="Prefer not to say">Prefer not to say</option>
+
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="dob" class="mb-2 block text-sm font-bold text-ink">
+                            Date of Birth
+                        </label>
+
+                        <input type="date" id="dob" name="dob"
+                               class="form-input w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm outline-none">
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- ADDRESS INFORMATION -->
+            <div>
+
+                <h3 class="mb-5 flex items-center gap-2 font-display text-lg font-extrabold text-ink">
+                    <span class="flex size-8 items-center justify-center rounded-lg bg-mint text-brand">02</span>
+                    Address Information
+                </h3>
+
+                <div class="space-y-5">
+
+                    <div>
+                        <label for="address" class="mb-2 block text-sm font-bold text-ink">
+                            Full Address *
+                        </label>
+
+                        <textarea id="address" name="address" rows="3"
+                                  placeholder="House number, street, area..."
+                                  required
+                                  class="form-input w-full resize-none rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm outline-none"></textarea>
+                    </div>
+
+                    <div class="grid gap-5 sm:grid-cols-2">
+
+                        <div>
+                            <label for="city" class="mb-2 block text-sm font-bold text-ink">
+                                City *
+                            </label>
+
+                            <input type="text" id="city" name="city"
+                                   placeholder="Enter city"
+                                   required
+                                   class="form-input w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm outline-none">
+                        </div>
+
+                        <div>
+                            <label for="state" class="mb-2 block text-sm font-bold text-ink">
+                                State *
+                            </label>
+
+                            <input type="text" id="state" name="state"
+                                   placeholder="Enter state"
+                                   required
+                                   class="form-input w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm outline-none">
+                        </div>
+
+                        <div>
+                            <label for="pincode" class="mb-2 block text-sm font-bold text-ink">
+                                PIN Code *
+                            </label>
+
+                            <input type="text" id="pincode" name="pincode"
+                                   placeholder="6 digit PIN code"
+                                   maxlength="6"
+                                   inputmode="numeric"
+                                   required
+                                   class="form-input w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm outline-none">
+                        </div>
+
+                        <div>
+                            <label for="country" class="mb-2 block text-sm font-bold text-ink">
+                                Country *
+                            </label>
+
+                            <select id="country" name="country" required
+                                    class="form-input w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm outline-none">
+
+                                <option value="India">India</option>
+                                <option value="Other">Other</option>
+
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- PET INFORMATION -->
+            <div>
+
+                <h3 class="mb-5 flex items-center gap-2 font-display text-lg font-extrabold text-ink">
+                    <span class="flex size-8 items-center justify-center rounded-lg bg-mint text-brand">03</span>
+                    Pet Information
+                </h3>
+
+                <div class="grid gap-5 sm:grid-cols-2">
+
+                    <div>
+                        <label for="petType" class="mb-2 block text-sm font-bold text-ink">
+                            Pet Type *
+                        </label>
+
+                        <select id="petType" name="petType" required
+                                class="form-input w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm outline-none">
+
+                            <option value="">Select Pet</option>
+                            <option value="Dog">Dog 🐶</option>
+                            <option value="Cat">Cat 🐱</option>
+                            <option value="Bird">Bird 🦜</option>
+                            <option value="Rabbit">Rabbit 🐰</option>
+                            <option value="Fish">Fish 🐠</option>
+                            <option value="Other">Other</option>
+                            <option value="No Pet Yet">No Pet Yet</option>
+
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="petName" class="mb-2 block text-sm font-bold text-ink">
+                            Pet Name
+                        </label>
+
+                        <input type="text" id="petName" name="petName"
+                               placeholder="Enter pet name"
+                               class="form-input w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm outline-none">
+                    </div>
+
+                    <div>
+                        <label for="petBreed" class="mb-2 block text-sm font-bold text-ink">
+                            Pet Breed
+                        </label>
+
+                        <input type="text" id="petBreed" name="petBreed"
+                               placeholder="Enter breed"
+                               class="form-input w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm outline-none">
+                    </div>
+
+                    <div>
+                        <label for="petAge" class="mb-2 block text-sm font-bold text-ink">
+                            Pet Age
+                        </label>
+
+                        <input type="number" id="petAge" name="petAge"
+                               placeholder="Age in years"
+                               min="0" max="100"
+                               class="form-input w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm outline-none">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACCOUNT INFORMATION -->
+            <div>
+
+                <h3 class="mb-5 flex items-center gap-2 font-display text-lg font-extrabold text-ink">
+                    <span class="flex size-8 items-center justify-center rounded-lg bg-mint text-brand">04</span>
+                    Account Security
+                </h3>
+
+                <div class="space-y-5">
+
+                    <div>
+                        <label for="password" class="mb-2 block text-sm font-bold text-ink">
+                            Create Password *
+                        </label>
+
+                        <div class="relative">
+
+                            <input type="password" id="password" name="password"
+                                   placeholder="Minimum 8 characters"
+                                   minlength="8"
+                                   autocomplete="new-password"
+                                   required
+                                   class="form-input w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 pr-16 text-sm outline-none">
+
+                            <button type="button" onclick="togglePassword('password','togglePassword1')"
+                                    id="togglePassword1"
+                                    class="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-brand">
+                                Show
+                            </button>
+
+                        </div>
+
+                        <p class="mt-2 text-xs text-muted">
+                            Use at least 8 characters, including uppercase, lowercase, number and special character.
+                        </p>
+                    </div>
+
+                    <div>
+                        <label for="confirmPassword" class="mb-2 block text-sm font-bold text-ink">
+                            Confirm Password *
+                        </label>
+
+                        <div class="relative">
+
+                            <input type="password" id="confirmPassword" name="confirmPassword"
+                                   placeholder="Re-enter your password"
+                                   autocomplete="new-password"
+                                   required
+                                   class="form-input w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 pr-16 text-sm outline-none">
+
+                            <button type="button" onclick="togglePassword('confirmPassword','togglePassword2')"
+                                    id="togglePassword2"
+                                    class="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-brand">
+                                Show
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TERMS -->
+            <div class="space-y-4 border-t border-gray-100 pt-6">
+
+                <label class="flex cursor-pointer items-start gap-3 text-sm leading-6 text-muted">
+
+                    <input type="checkbox" id="terms" name="terms"
+                           required
+                           class="mt-1 size-4 shrink-0 accent-[#216b4e]">
+
+                    <span>
+                        I agree to Pawly's
+                        <a href="terms.html" class="font-bold text-brand hover:underline">Terms & Conditions</a>
+                        and
+                        <a href="privacy.html" class="font-bold text-brand hover:underline">Privacy Policy</a>.
+                    </span>
+
+                </label>
+
+                <label class="flex cursor-pointer items-start gap-3 text-sm leading-6 text-muted">
+
+                    <input type="checkbox" id="updates" name="updates"
+                           class="mt-1 size-4 shrink-0 accent-[#216b4e]">
+
+                    <span>
+                        I would like to receive pet care tips, offers and updates from Pawly.
+                    </span>
+
+                </label>
+
+            </div>
+
+
+            <!-- SUBMIT -->
+            <button type="submit"
+                    class="register-btn flex w-full items-center justify-center gap-3 rounded-full bg-brand px-7 py-4 font-bold text-white shadow-lg shadow-brand/20 hover:bg-[#195842]">
+
+                Create My Account
+
+                <span>→</span>
+
+            </button>
+
+            <p class="text-center text-sm text-muted">
+                Already have an account?
+
+                <a href="login.html" class="font-extrabold text-brand hover:underline">
+                    Login Now
+                </a>
+            </p>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="border-t border-black/5 bg-white py-7">
+
+    <div class="mx-auto max-w-7xl px-5 text-center">
+
+        <p class="text-sm text-muted">
+            Made with 💚 for the ones who make a house a home.
+        </p>
+
+        <p class="mt-3 text-xs text-muted">
+            © 2026 Pawly. All tails welcome. 🐾
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/register.js"></script>
+
+</body>
+</html>

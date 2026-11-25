@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+name="description"
+content="Keep your pets happy and healthy with Pawly, your all-in-one pet care dashboard."
+/>
+<title>Pawly — Happy pets, healthier days</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+rel="stylesheet"
+/>
+<link
+rel="stylesheet"
+href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+/>
+
+<link
+rel="stylesheet"
+href="css/style.css"
+/>
+<style type="text/tailwindcss">
+
+@theme {
+--color-brand: #216b4e !important;
+--color-mint: #e8f4ed !important;
+--color-paper: #f8faf6 !important;
+--color-ink: #1d3028 !important;
+--color-muted: #718078 !important;
+
+--font-display: "Manrope", sans-serif !important;
+--font-sans: "DM Sans", sans-serif !;
+}
+
+</style>
+</head>
+<body onload="mainFunction()">
+<div id="loader"></div>
+<main id="main">  
+<header class="relative z-20">
+<nav class="section-wrap flex h-[82px] items-center justify-between" aria-label="Main navigation">
+<a href="index.html" class="flex items-center gap-2.5" aria-label="Pawly home">
+<span class="flex size-10 items-center justify-center rounded-[14px] bg-brand text-white">
+<svg viewBox="0 0 24 24" fill="none" class="size-6" aria-hidden="true">
+<path d="M12 20.25c-2.6-1.6-7.5-5.3-7.5-10.1a4.1 4.1 0 0 1 7.5-2.3 4.1 4.1 0 0 1 7.5 2.3c0 4.8-4.9 8.5-7.5 10.1Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M8.8 12.2c.8-.8 1.6-1.2 3.2-1.2s2.4.4 3.2 1.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+</svg>
+</span>
+<span class="font-display text-[1.45rem] font-extrabold tracking-tight">pawly<span class="text-brand">.</span></span>
+</a>
+
+<div class="hidden items-center gap-9 text-sm font-semibold text-ink/70 md:flex">
+<a class="transition hover:text-brand" href="#pets">My pets</a>
+<a class="transition hover:text-brand" href="#care">Care planner</a>
+<a class="transition hover:text-brand" href="#services">Services</a>
+<a class="transition hover:text-brand" href="#community">Community</a>
+<a class="transition hover:text-brand" href="contact.html">Contact us</a>
+</div>
+
+<div class="hidden items-center gap-3 md:flex">
+<a href="login.html"><button type="button" class="rounded-full px-4 py-2.5 text-sm font-bold text-ink transition hover:bg-black/5">Log in</button></a>
+<a href="#get-started" class="rounded-full bg-brand px-5 py-3 text-sm font-bold text-white shadow-lg shadow-brand/15 transition hover:-translate-y-0.5 hover:bg-[#195842]">Get started <span aria-hidden="true">↗</span></a>
+</div>
+
+<button id="menu-toggle" type="button" class="flex size-11 items-center justify-center rounded-full border border-black/10 text-ink md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+<svg id="menu-icon" viewBox="0 0 24 24" fill="none" class="size-5" aria-hidden="true">
+<path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+</svg>
+</button>
+</nav>
+<div id="mobile-menu" class="section-wrap hidden pb-5 md:hidden">
+<div class="grid gap-1 rounded-3xl border border-black/5 bg-white p-3 shadow-xl">
+<a class="rounded-2xl px-4 py-3 font-semibold hover:bg-mint" href="#pets">My pets</a>
+<a class="rounded-2xl px-4 py-3 font-semibold hover:bg-mint" href="#care">Care planner</a>
+<a class="rounded-2xl px-4 py-3 font-semibold hover:bg-mint" href="#services">Services</a>
+<a class="rounded-2xl px-4 py-3 font-semibold hover:bg-mint" href="#community">Community</a>
+<a class="rounded-2xl px-4 py-3 font-semibold hover:bg-mint" href="contact.html">Contact us</a>
+<a class="mt-1 rounded-full bg-brand px-4 py-3 text-center font-bold text-white" href="#get-started">Get started ↗</a>
+</div>
+</div>
+</header>
+
+<!-- contact us -->
+<section class="section-wrap py-16 sm:py-20 lg:py-24" id="contact">
+<!-- Section Heading -->
+<div class="mx-auto mb-12 max-w-2xl text-center" data-aos="fade-up">
+<span class="inline-block rounded-full bg-mint px-5 py-2 text-sm font-bold text-brand">
+Get In Touch
+</span>
+
+<h1 class="mt-5 font-display text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
+Let's Talk About <span class="text-brand">Your Pets.</span>
+</h1>
+
+<p class="mt-4 leading-7 text-muted">
+Have questions about pet care, grooming or our services?
+We are always happy to help you and your furry friends.
+</p>
+</div>
+
+<!-- Two Grid Layout -->
+<div class="grid gap-8 lg:grid-cols-2 lg:gap-10">
+
+<!-- LEFT GRID: OFFICE DETAILS -->
+<div class="rounded-[2rem] bg-[#e8f4ed] p-6 sm:p-9"
+data-aos="fade-right">
+
+<span class="text-sm font-bold uppercase tracking-widest text-brand">
+Contact Information
+</span>
+
+<h2 class="mt-3 font-display text-3xl font-extrabold text-ink">
+Visit Our Office
+</h2>
+
+<p class="mt-3 leading-7 text-muted">
+Our friendly team is ready to answer your questions
+and provide the best care for your pets.
+</p>
+
+<!-- Office Address -->
+<div class="mt-9 space-y-7">
+
+<div class="flex gap-4">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-white text-brand">
+<svg class="size-6" fill="none" stroke="currentColor"
+viewBox="0 0 24 24">
+<path stroke-width="1.8" stroke-linecap="round"
+stroke-linejoin="round"
+d="M12 21s7-5.2 7-12a7 7 0 1 0-14 0c0 6.8 7 12 7 12Z"/>
+<circle cx="12" cy="9" r="2.5" stroke-width="1.8"/>
+</svg>
+</div>
+
+<div>
+<h3 class="font-bold text-ink">Office Address</h3>
+<p class="mt-2 text-sm leading-6 text-muted">
+Pawly Pet Care Center,<br>
+Your Office Address,<br>
+Your City, State, India.
+</p>
+</div>
+</div>
+
+<!-- Phone -->
+<div class="flex gap-4">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-white text-brand">
+<svg class="size-6" fill="none" stroke="currentColor"
+viewBox="0 0 24 24">
+<path stroke-width="1.8" stroke-linecap="round"
+stroke-linejoin="round"
+d="M3 5a2 2 0 0 1 2-2h3l2 5-3 2a16 16 0 0 0 7 7l2-3 5 2v3a2 2 0 0 1-2 2A17 17 0 0 1 3 5Z"/>
+</svg>
+</div>
+
+<div>
+<h3 class="font-bold text-ink">Phone Number</h3>
+<a href="tel:+910000000000"
+class="mt-2 block text-sm text-muted transition hover:text-brand">
++91 00000 00000
+</a>
+<p class="mt-1 text-xs text-muted">Mon – Sat, 9 AM – 7 PM</p>
+</div>
+</div>
+
+<!-- Email -->
+<div class="flex gap-4">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-white text-brand">
+<svg class="size-6" fill="none" stroke="currentColor"
+viewBox="0 0 24 24">
+<rect x="3" y="5" width="18" height="14"
+rx="2" stroke-width="1.8"/>
+<path d="m3 7 9 6 9-6" stroke-width="1.8"
+stroke-linecap="round"/>
+</svg>
+</div>
+
+<div>
+<h3 class="font-bold text-ink">Email Address</h3>
+<a href="mailto:hello@pawly.com"
+class="mt-2 block text-sm text-muted hover:text-brand">
+hello@pawly.com
+</a>
+<p class="mt-1 text-xs text-muted">
+We reply within 24 hours.
+</p>
+</div>
+</div>
+
+<!-- Working Hours -->
+<div class="flex gap-4">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-white text-brand">
+<svg class="size-6" fill="none" stroke="currentColor"
+viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="9" stroke-width="1.8"/>
+<path d="M12 7v5l3 2" stroke-width="1.8"
+stroke-linecap="round"/>
+</svg>
+</div>
+
+<div>
+<h3 class="font-bold text-ink">Working Hours</h3>
+<p class="mt-2 text-sm text-muted">
+Monday – Saturday: 9 AM – 7 PM
+</p>
+<p class="mt-1 text-sm text-muted">
+Sunday: 10 AM – 4 PM
+</p>
+</div>
+</div>
+
+</div>
+
+<!-- Social Links -->
+<div class="mt-9 border-t border-brand/15 pt-7">
+<h3 class="font-bold text-ink">Follow Us</h3>
+
+<div class="mt-4 flex gap-3">
+<a href="#" aria-label="Instagram"
+class="flex size-11 items-center justify-center rounded-full bg-white font-bold text-brand transition hover:bg-brand hover:text-white">
+IG
+</a>
+
+<a href="#" aria-label="Facebook"
+class="flex size-11 items-center justify-center rounded-full bg-white font-bold text-brand transition hover:bg-brand hover:text-white">
+FB
+</a>
+
+<a href="#" aria-label="YouTube"
+class="flex size-11 items-center justify-center rounded-full bg-white font-bold text-brand transition hover:bg-brand hover:text-white">
+YT
+</a>
+
+<a href="#" aria-label="WhatsApp"
+class="flex size-11 items-center justify-center rounded-full bg-white font-bold text-brand transition hover:bg-brand hover:text-white">
+WA
+</a>
+</div>
+</div>
+
+<!-- Google Map -->
+<div class="mt-9 overflow-hidden rounded-3xl border-4 border-white shadow-lg">
+<iframe
+src="https://www.google.com/maps?q=Vadodara,Gujarat,India&output=embed"
+width="100%"
+height="250"
+style="border:0;"
+loading="lazy"
+referrerpolicy="no-referrer-when-downgrade"
+allowfullscreen
+title="Pawly Office Location">
+</iframe>
+</div>
+
+</div>
+
+
+<!-- RIGHT GRID: CONTACT FORM -->
+<div class="rounded-[2rem] bg-white p-6 shadow-[0_15px_60px_rgba(29,48,40,0.08)] sm:p-9"
+data-aos="fade-left">
+
+<span class="text-sm font-bold uppercase tracking-widest text-brand">
+Send Us A Message
+</span>
+
+<h2 class="mt-3 font-display text-3xl font-extrabold text-ink">
+Get In Touch With Us
+</h2>
+
+<p class="mt-3 leading-7 text-muted">
+Fill out the form below and our team will get back to you shortly.
+</p>
+
+<form action="thanks.html" name="frm" method="POST" class="mt-9 space-y-5" onsubmit="return validForm(this.value)">
+
+<!-- Name and Email -->
+<div class="grid gap-5 sm:grid-cols-2">
+
+<div>
+<label for="name" class="mb-2 block text-sm font-bold text-ink">
+Full Name *
+</label>
+<input
+type="text"
+id="name"
+name="name"
+placeholder="Enter your name"
+
+class="w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/10">
+</div>
+
+<div>
+<label for="email" class="mb-2 block text-sm font-bold text-ink">
+Email Address *
+</label>
+<input
+type="text"
+id="email"
+name="email"
+placeholder="Enter your email"
+
+class="w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/10">
+</div>
+
+</div>
+
+<!-- Phone and Subject -->
+<div class="grid gap-5 sm:grid-cols-2">
+
+<div>
+<label for="phone" class="mb-2 block text-sm font-bold text-ink">
+Phone Number *
+</label>
+<input
+type="tel"
+id="phone"
+name="phone"
+placeholder="+91 00000 00000"
+
+class="w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/10">
+</div>
+
+<div>
+<label for="subject" class="mb-2 block text-sm font-bold text-ink">
+Subject *
+</label>
+<select
+id="subject"
+name="subject"
+
+class="w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm text-muted outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/10">
+<option value="">Select Subject</option>
+<option value="Pet Grooming">Pet Grooming</option>
+<option value="Pet Healthcare">Pet Healthcare</option>
+<option value="Pet Training">Pet Training</option>
+<option value="Pet Adoption">Pet Adoption</option>
+<option value="Other">Other</option>
+</select>
+</div>
+
+</div>
+
+<!-- Pet Type -->
+<div>
+<label for="pet" class="mb-2 block text-sm font-bold text-ink">
+Select Your Pet
+</label>
+
+<select
+id="pet"
+name="pet"
+class="w-full rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm text-muted outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/10">
+
+<option value="">Choose Pet Type</option>
+<option value="Dog">Dog</option>
+<option value="Cat">Cat</option>
+<option value="Bird">Bird</option>
+<option value="Rabbit">Rabbit</option>
+<option value="Other">Other</option>
+</select>
+</div>
+
+<!-- Message -->
+<div>
+<label for="message" class="mb-2 block text-sm font-bold text-ink">
+Your Message *
+</label>
+
+<textarea
+id="message"
+name="message"
+rows="5"
+placeholder="Tell us how we can help you..."
+
+class="w-full resize-none rounded-xl border border-gray-200 bg-paper px-4 py-3.5 text-sm outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/10"></textarea>
+</div>
+
+<!-- Checkbox -->
+<div class="flex items-start gap-3">
+<input
+type="checkbox"
+id="privacy"
+
+class="mt-1 size-4 accent-[#216b4e]">
+
+<label for="privacy" class="text-sm leading-6 text-muted">
+I agree to the privacy policy and consent to being contacted by Pawly.
+</label>
+</div>
+
+<!-- Submit Button -->
+<button
+type="submit"
+class="group flex w-full items-center justify-center gap-3 rounded-full bg-brand px-7 py-4 font-bold text-white shadow-lg shadow-brand/20 transition duration-300 hover:-translate-y-1 hover:bg-[#195842]">
+
+Send Message
+
+<span class="transition-transform group-hover:translate-x-1">
+→
+</span>
+</button>
+
+<p class="text-center text-xs text-muted">
+We respect your privacy. Your information is safe with us.
+</p>
+
+</form>
+
+</div>
+
+</div>
+</section>
+
+
+
+
+<footer class="section-wrap py-8 sm:py-10">
+<div class="flex flex-col items-center justify-between gap-5 sm:flex-row">
+<a href="#" class="flex items-center gap-2 font-display text-xl font-extrabold">🐾 pawly<span class="text-brand">.</span></a>
+<p class="text-center text-sm text-muted">Made with love for the ones who make a house a home.</p>
+<div class="flex gap-5 text-sm font-semibold text-muted"><a class="transition hover:text-brand" href="#pets">Pets</a><a class="transition hover:text-brand" href="#care">Care</a><a class="transition hover:text-brand" href="#community">Community</a></div>
+</div>
+<p class="mt-6 border-t border-black/5 pt-5 text-center text-xs text-muted">© 2025 Pawly. All tails welcome.</p>
+</footer>
+</main>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
